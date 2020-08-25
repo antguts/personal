@@ -27,14 +27,16 @@ body{
 
 .about, .projects, .contact, .team{
     position: relative;
-    /* background-color: white; */
+    /* background-color: ; */
     width: 100%;
     padding-right: 0;
     height:22vh;
     text-align: center;
     border-bottom: 2px solid black;
 }
-
+#paraTest{
+    color: white;
+}
 #one,#two{
     position: relative;
     opacity: 0;
@@ -48,9 +50,10 @@ body{
 }
 #closeIcon{
     display: none;
+    font-size: 28px;
     top:'-76px';
     opacity: 0;
-    border-bottom: 1px solid #13c60d;
+    /* border-bottom: 1px solid #13c60d; */
     padding: 0 30px;
     /* opacity: 0; */
 }

@@ -15,16 +15,21 @@ window.addEventListener('load', (event) => {
     
   });
 
+let letters=['a','b','c','d','e','f','g','h','i','j','k','l','m']
 //checks if opened or not and runs appropriate animation.  
 let clicked=(e)=>{    
     if(e.id == 'false'){ 
         tl.to(e.parentNode, .5,{height:'55vh'})
         tl.to(e.parentNode,.1,{backgroundColor:'#000000'},'-=1')
         tl.to(e.childNodes[1],{display: 'revert'},'-=1')
-        tl.to(e.childNodes[1], .3,{opacity: .9})
-        tl.to(e.childNodes[0], .7,{right:'250px'},'-=.8')
-        tl.to(e.childNodes[2], .7,{left:'250px'},'-=.8')
-
+        tl.to(e.childNodes[1], .2,{opacity: .9},'-=.3')
+        tl.to(e.childNodes[0], .7,{right:'250px'},'-=.6')
+        tl.to(e.childNodes[2], .7,{left:'250px'},'-=.6')
+        // tl.set('#paraTest',{text: 'm'});
+        // for(let i=0;i<letters.length;i++){
+        //     // if(i%3==0)
+        //     // document.querySelector('#parTest').innerHTML=letters[i/3]
+        // }
 
         //Switch statement to check which info section to load
         // switch(){
