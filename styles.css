@@ -19,13 +19,17 @@ body{
     font-size: 17px;
     margin: 0;
 }
+#location{
+    color: white;
+    margin-left: 8px;
+}
 
 #directory{
     margin-left: 10px;
     color: white;
 }
 
-.about, .projects, .contact, .team{
+.about_Section, .projects_Section, .contact_Section, .team_Section{
     position: relative;
     /* background-color: ; */
     width: 100%;
@@ -34,9 +38,16 @@ body{
     text-align: center;
     border-bottom: 2px solid black;
 }
-#paraTest{
+#about-info{
     color: white;
+    width: 80%;
+    margin: auto;
 }
+#p1,#p2,#p3{
+    opacity: 0;
+}
+
+
 #one,#two{
     position: relative;
     opacity: 0;
@@ -59,15 +70,22 @@ body{
 }
 
 
-#cursor{
+.header #cursor{
     color: white;
     position: absolute;
     font-size: 11px;
     width: 15px;
     margin-top: 8px;
+    margin-left: 5px;
     /* border-bottom: 3px solid white; */
 }
 
+.about_Section #cursor{
+    position: absolute;
+    margin: 7px 6px 0;
+    color: white;
+    font-size: 11px;
+}
 
 h1{
     color: #13c60d;
@@ -80,13 +98,20 @@ h1{
     overflow: auto;
 }
 
-#about-info{
-    opacity: 0;
+/* CONTACT SECTION========================================================================= */
+/* <div class="contactContent">
+                <div id="email"></div>
+                <div id="linkedin"></div>
+                <div id="github"></div>
+            </div> */
+
+
+.contactContent{
+    display: flex;
+    justify-content: space-between;
 }
 
-
-
-.team{
+.team_Section{
     border: none;
 }
 
