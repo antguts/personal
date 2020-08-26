@@ -10,10 +10,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
 </head>
 <body>
-    <div class="header">
+    <div class="terminal">
         <p>Anthony-Gutilla@MOBILE~$:<span id="location"></span><span id='cursor'>&lhblk;</span></p>
     </div>
-    
+    <!-- Will be the window for desktop terminal -->
+    <div class="terminalScreen"></div>
+    <div class="deskNav">
+        <h3>About</h3>
+        <h3>Projects</h3>
+        <h3>Team</h3>
+    </div>
     
     
     <div class='main'>
@@ -22,29 +28,43 @@
             <div id='about-info'>
                 <p id="p1">I am a focused individual looking to improve my skill set within the IT community. I have attended Ironhack's web development bootcamp in Miami while also earning a bachelors in IT forensics at PBSC. I work as a freelance web developer.</p>
                 <p id="p2">My IT experience includes project management for a small dev shop specializing in WordPress and WooCommerce. I also worked as a Ruby on Rails developer for View-thought. I returned to Hospitality due to limited growth potential.</p>
-                <p id="p3">I joined Ironhack because I love coding and was given the opportunity to spend my time being involved with a team that understands the industry inside and out.</p>
-
-
-                <!-- <h2>Skills:</h2>
-                <h2>Experience:</h2>
-                <h2>Goals:</h2> -->
+                <div id="skillset">
+                    <h3>JavaScript - SCSS - React.js - Java - Express.js - MongoDB - Responsive Design - Node.js - Git - GSAP - HTML/CSS - SQL - SONY VEGAS - Rails</h3>
+                </div>                
             </div>
-            <!-- <div id='aboutInfo'><span id="aboutTex"></span></div> -->
         </div>
 
 
         <div class="projects_Section">
             <h1 onClick="clicked(this)" id='false'><span id='one'>Proj</span><span id="closeIcon">&#9166;Alt+F4</span><span id='two'>ects</span></h1>
+            <div class="projectContent">
+                <p>Iron Coin </p><span>[Utilizes the Crypto Control API to provide information on crypto currency]</span>
+                <a href="https://ironcoin-crypto.com/" target="blank"><img src="assets/CryptoCoinSS.png" /></a>
+                <p>Zombie Karens! </p><span>[FPS desktop shooter where you battle the hoard of Karens at the park]</span>
+                <a href="https://antguts.github.io/profile/Karen/index.html" target="blank"><img src="assets/zomKarSS.png" /></a>
+            </div>
+
         </div>
         
+       
         <div class="contact_Section">
             <h1 onClick="clicked(this)" id='false'><span id='one'>Con</span><span id="closeIcon">&#9166;cd ..</span><span id='two'>tact</span></h1>
             <div class="contactContent">
-                <div id="email"></div>
-                <div id="linkedin"></div>
-                <div id="github"></div>
+                <div id="email">
+                    <a href="mailto: antgut035@gmail.com" target="blank"><img src="assets/emailIcon.png" /></a>
+                </div>
+                <div id="linkedin">
+                    <a href="https://www.linkedin.com/in/agutilla/" target="blank"><img src="assets/linkedInIcon.png" /></a>
+                </div>
+                <div id="github">
+                    <a href="https://github.com/antguts" target="blank"><img src="assets/githubIcon.png" /></a>
+                </div>
             </div>
-
+            <div id="iconInfo">
+                <p><span>$</span>Email</p>
+                <p><span>$</span>Linkedin</p>
+                <p><span>$</span>Github</p>
+            </div>
         </div>
         
         <div class="team_Section">
@@ -53,7 +73,5 @@
     </div>    
     
 </body>
-        <!-- <footer>
-            <p>contact</p>
-        </footer> -->
+       
 </html>
