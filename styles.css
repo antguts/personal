@@ -6,8 +6,15 @@ body{
     background-image: url('assets/VSbackground.png');
     background-repeat: no-repeat;
     background-size: cover;
-    /* margin: auto; */
     padding-bottom: 0;
+}
+a{
+    text-decoration: none;
+}
+
+h3:hover{
+    color: #9cdcfe;
+    cursor: pointer;
 }
 .terminalScreen{
     position: absolute;
@@ -51,23 +58,15 @@ body{
     font-size: 50px;
     margin: 10px 5px 20px;
 }
-h3:hover{
-    color: #9cdcfe;
-    cursor: pointer;
-    /* height: 200px; */
-}
 
 .deskNav img{
     position: absolute;
-    left: 5px;
     width: 20px;
 }
 
 
 .about_Section,.team_Section,.projects_Section,.contact_Section{
     display: none;
-    /* opacity: 0; */
-    /* z-index: -20; */
 }
 
 @media screen and (max-width: 650px) {
@@ -89,8 +88,7 @@ h3:hover{
     .terminal p{
         font-size: 17px;
     }
-    /* .about_Section,#team_Section,#projects_Section,#contact_Section{
-    } */
+
     body{
         margin: 0;
         font-family: 'Dosis';
@@ -162,7 +160,6 @@ h3:hover{
 
 .main{
     padding-top: 20px;
-    /* overflow: auto; */
 }
 
 
@@ -171,7 +168,6 @@ h3:hover{
 @media screen and (max-width: 650px) {
     h1{
         font-family: 'Times New Roman', Times, serif;
-        
         text-align: left;
         color: #13c60d;
         margin: 0;
@@ -227,6 +223,33 @@ h3:hover{
 }
             
 /* CONTACT SECTION=================================================================== */
+
+.desktopContact{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 250px;
+    right: 0;
+    width: 320px;
+    z-index: 2;
+}
+.desktopContact img{
+    width: 95px;
+    /* margin-bottom: 5px; */
+}
+.desktopContact p{
+    margin-top: 110px;
+    margin-left: 25px;
+    right: 5px;
+    color: green;
+}
+
+
+#deskGithub,#deskLinkedin,#deskEmail{
+    margin-left: 5px;
+    height: 100px;
+}
 
 @media screen and (max-width: 650px) {
     .contact_Section img{
