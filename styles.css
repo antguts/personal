@@ -6,27 +6,26 @@ body{
     background-image: url('assets/VSbackground.png');
     background-repeat: no-repeat;
     background-size: cover;
-}
-.main{
-    display: none;
-    /* opacity: 0;
-    z-index: -12;
-    cursor: not-allowed; */
+    /* width: 100%; */
+    margin: auto;
+    padding-bottom: 0;
 }
 .terminalScreen{
-    position: fixed;
+    position: absolute;
     margin-top: 50px;
-    top:20px;
+    top:135px;
+    left: 100px;
     width: 1400px;
-    height: 1000px;
+    height: 650px;
     background-image: url('assets/terminalBG.png');
     background-repeat: no-repeat;
     background-size: cover;
     
 }
 .terminal{
-    position: fixed;
-    top:100px;
+    position: absolute;
+    left: 100px;
+    top:207px;
     z-index: 12;
     color: #13c60d;
     height: 3vh;
@@ -37,41 +36,71 @@ body{
     margin: 0;
 }
 .deskNav{
+    box-shadow: 2px 2px grey;
     position: absolute;
-    margin-top: 30px;
+    font-family: 'arial';
+    font-weight: 100;
+    margin-top: 170px;
+    padding-left: 20px;
+    width: 260px;
+    left: 1050px;
+    background-color: #f2f2f2;
+    font-weight: lighter;
     z-index: 30;
 }
+.deskNav h3{
+    font-size: 50px;
+    margin: 10px 5px 20px;
+}
+h3:hover{
+    color: #13c60d;
+    cursor: pointer;
+    /* height: 200px; */
+}
+
+.deskNav img{
+    position: absolute;
+    left: 5px;
+    width: 20px;
+}
+
+
+.about_Section,.team_Section,.projects_Section,.contact_Section{
+    display: none;
+}
+
 @media screen and (max-width: 650px) {
+    #desktopTitle{
+        display: none;
+    }
     .deskNav{
-        position: absolute;
-        opacity: 0;
-        z-index: -11;
+        display: none;
     }
     .terminal{
         background-color: black;
+        left: 0;
         position: fixed;
         width: 100%;
     }
     .terminal{
         top:0;
     }
-    .main{
-        display: revert;
-    }
+    /* .about_Section,#team_Section,#projects_Section,#contact_Section{
+    } */
     body{
         margin: 0;
         font-family: 'Dosis';
         background: none;
     }
     .terminalScreen{
-        opacity: 0;
-        z-index: -20;
+        display: none;
     }
     .main{
         display: revert;
     }
     .about_Section, .projects_Section, .contact_Section, .team_Section{
         position: relative;
+        display: revert;
         width: 100%;
         padding-right: 0;
         height:22vh;
@@ -126,9 +155,15 @@ body{
 }
 
 h1{
+    font-family: 'arial';
+    font-weight: lighter;
     color: #13c60d;
     margin: 0;
     font-size: 75px;
+}
+
+.main span{
+    font-family: 'Dosis';
 }
 
 .main{

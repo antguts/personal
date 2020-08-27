@@ -52,7 +52,6 @@ let deliverContent=(e)=>{
 //animations for display. 
 let aboutContent=(e)=>{
     if(e.id == 'false'){
-        
         tl.to('#about-info #p1',.5,{opacity: 1, y:10},'-=.3')
         tl.to('#about-info #p2',.5,{opacity: 1, y:10},'-=.3')
         tl.to('#about-info #skillset',.5,{opacity: 1, y:10},'-=.3');
@@ -91,36 +90,40 @@ let contactContent=(e)=>{
     
 // }
 
+let sectionOpen=(e)=>{
+    e.parentNode.style.overflow='auto'
+    tl.to(e.parentNode, .5,{height:'55vh'})
+    tl.to(e.parentNode,.1,{backgroundColor:'#000000'},'-=1')
+    tl.to(e.childNodes[1],{display: 'revert'},'-=1')
+    tl.to(e.childNodes[1], .2,{opacity: .9},'-=.3')
+    tl.to(e.childNodes[0], .7,{right:'270px'},'-=.6')
+    tl.to(e.childNodes[2], .7,{left:'270px'},'-=.6');
+    deliverContent(e)
+    e.id='true';
+}
+let sectionClosed=(e)=>{
+    deliverContent(e)
+    tl.to(e.parentNode, .5,{height:'25vh'})
+    tl.to(e.parentNode,.1,{backgroundColor:'white'},'-=1')
+    tl.to(e.childNodes[1],{opacity: 0},'-=1')
+    tl.to(e.childNodes[1],{display: 'none'},'-=1')
+    tl.to(e.childNodes[0], .5,{right:'0'},'-=.5')
+    tl.to(e.childNodes[2], .5,{left:'0'},'-=.5')
+    e.parentNode.style.overflow='hidden';
+    document.querySelector('#location').innerHTML=''
+    e.id='false';
+}
+
 //checks if opened or not and runs appropriate animation.Using hidden to keep the unopened boxes from shifting when user slides without clicking link.
 let clicked=(e)=>{  
     document.querySelector('#location').innerHTML='' 
     if(e.id == 'false'){ 
-        tl.to(e.parentNode, .5,{height:'55vh'})
-        tl.to(e.parentNode,.1,{backgroundColor:'#000000'},'-=1')
-        tl.to(e.childNodes[1],{display: 'revert'},'-=1')
-        tl.to(e.childNodes[1], .2,{opacity: .9},'-=.3')
-        tl.to(e.childNodes[0], .7,{right:'270px'},'-=.6')
-        tl.to(e.childNodes[2], .7,{left:'270px'},'-=.6')
-        e.parentNode.style.overflow='auto'
+        sectionOpen(e)
+        // deliverContent(e)
         changeHeaderText(e)
-        deliverContent(e)
-        
-        
-        e.id='true';
     }else{
-        e.parentNode.style.overflow='hidden';
-        deliverContent(e);
-        tl.to(e.parentNode, .5,{height:'25vh'})
-        tl.to(e.parentNode,.1,{backgroundColor:'white'},'-=1')
-        tl.to(e.childNodes[1],{opacity: 0},'-=1')
-        tl.to(e.childNodes[1],{display: 'none'},'-=1')
-        tl.to(e.childNodes[0], .5,{right:'0'},'-=.5')
-        tl.to(e.childNodes[2], .5,{left:'0'},'-=.5')
-        document.querySelector('#location').innerHTML=''
-        
-
-        
-        e.id='false';
+        sectionClosed(e);
+        // deliverContent(e);
     }
 }
 
