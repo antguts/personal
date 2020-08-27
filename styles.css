@@ -80,12 +80,14 @@ h3:hover{
     .terminal{
         /* font-size: 25px; */
         background-color: black;
+        top:0;
         left: 0;
         position: fixed;
         width: 100%;
     }
-    .terminal{
-        top:0;
+    
+    .terminal p{
+        font-size: 17px;
     }
     /* .about_Section,#team_Section,#projects_Section,#contact_Section{
     } */
