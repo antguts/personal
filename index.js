@@ -18,15 +18,15 @@ window.addEventListener('load', (event) => {
 
 //functions to delay type text in the header
 let changeHeaderText=(e)=>{
-        //scrolls text in the header
-        for(let i=0;i<e.parentNode.className.length;i++){
-            delayLetters(i,e);
+        // scrolls text in the header
+        let name=e.parentNode.className
+        for(let i=0;i<name.length;i++){
+            delayLetters(i,name);
         }
-    }
-
-let delayLetters=(i,e)=> { 
+}
+let delayLetters=(i,name)=> { 
     setTimeout(function() { 
-        document.querySelector('#location').innerHTML+=e.parentNode.className[i]
+        document.querySelector('#location').innerHTML+=name[i]
     }, 40 * i); 
 } 
 
@@ -34,15 +34,18 @@ let delayLetters=(i,e)=> {
 let deliverContent=(e)=>{
     switch(e.parentNode.className){
         case 'about_Section':
+        case 'about_section_content':
             aboutContent(e)
             break;
         case 'contact_Section':
             contactContent(e);
             break;
         case 'projects_Section':
+        case 'projects_section_content':
             projectsContent(e)
             break;
         case 'team_Section':
+        case 'team_section_content':
             break;
     }
 }
@@ -89,6 +92,24 @@ let contactContent=(e)=>{
 // let aboutContent=()=>{
     
 // }
+let deskClicked=(e)=>{
+    document.querySelector('#location').innerHTML='' 
+    if(e.id == 'false'){ 
+        // sectionOpen(e)
+        // console.log(e.parentNode.className)
+        changeHeaderText(e)
+        // document.querySelector('#about-info').style.display='revert';
+        // document.querySelector('#about-info').style.opacity=1;
+
+        // deliverContent(e)
+    }else{
+        changeHeaderText(e)
+        // deliverContent(e);
+        // console.log(e.parentNode.className)
+        // sectionClosed(e);
+    }
+}
+
 
 let sectionOpen=(e)=>{
     e.parentNode.style.overflow='auto'

@@ -6,8 +6,7 @@ body{
     background-image: url('assets/VSbackground.png');
     background-repeat: no-repeat;
     background-size: cover;
-    /* width: 100%; */
-    margin: auto;
+    /* margin: auto; */
     padding-bottom: 0;
 }
 .terminalScreen{
@@ -24,7 +23,7 @@ body{
 }
 .terminal{
     position: absolute;
-    left: 100px;
+    left: 105px;
     top:207px;
     z-index: 12;
     color: #13c60d;
@@ -53,7 +52,7 @@ body{
     margin: 10px 5px 20px;
 }
 h3:hover{
-    color: #13c60d;
+    color: #9cdcfe;
     cursor: pointer;
     /* height: 200px; */
 }
@@ -67,6 +66,8 @@ h3:hover{
 
 .about_Section,.team_Section,.projects_Section,.contact_Section{
     display: none;
+    /* opacity: 0; */
+    /* z-index: -20; */
 }
 
 @media screen and (max-width: 650px) {
@@ -94,9 +95,6 @@ h3:hover{
     }
     .terminalScreen{
         display: none;
-    }
-    .main{
-        display: revert;
     }
     .about_Section, .projects_Section, .contact_Section, .team_Section{
         position: relative;
@@ -154,13 +152,6 @@ h3:hover{
     margin-left: 5px;
 }
 
-h1{
-    font-family: 'arial';
-    font-weight: lighter;
-    color: #13c60d;
-    margin: 0;
-    font-size: 75px;
-}
 
 .main span{
     font-family: 'Dosis';
@@ -175,6 +166,14 @@ h1{
 
 /* ABOUT SECTION============================================================================= */
 @media screen and (max-width: 650px) {
+    h1{
+        font-family: 'Times New Roman', Times, serif;
+        
+        text-align: left;
+        color: #13c60d;
+        margin: 0;
+        font-size: 75px;
+    }
     #about-info{
         color: white;
         width: 80%;
@@ -195,6 +194,7 @@ h1{
         font-size: 11px;
     }
 }
+
 
 
 
