@@ -7,6 +7,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 0;
+    margin: auto;
 }
 a{
     text-decoration: none;
@@ -69,7 +70,18 @@ h3:hover{
     display: none;
 }
 
+
+.main{
+    display: none;
+}
+
 @media screen and (max-width: 650px) {
+    #d_team,#d_projects,#d_about{
+        display: none;
+    }
+    .main{
+        display: revert;
+    }
     #desktopTitle{
         display: none;
     }
@@ -198,6 +210,25 @@ h3:hover{
 
 
 /* PROJECT SECTION========================================================================= */
+
+#d_projects{
+    position: absolute;
+    opacity: 0;
+    filter: blur(4px);
+}
+#d_projects img{
+    float: right;
+    width: 300px;
+}
+#d_projects p{
+    width: 200px;
+}
+#d_projects a{
+    color: #13c60d;
+}
+
+
+
 @media screen and (max-width: 650px) {
     .projectContent{
         opacity: 0;
@@ -229,15 +260,20 @@ h3:hover{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    top: 250px;
+    top: 280px;
     right: 0;
     width: 320px;
     z-index: 2;
 }
 .desktopContact img{
     width: 95px;
-    /* margin-bottom: 5px; */
 }
+.desktopContact img:hover{
+    margin-top: -10px;
+    margin-left: -5px;
+    width: 110px;
+}
+
 .desktopContact p{
     margin-top: 110px;
     margin-left: 25px;
@@ -250,6 +286,33 @@ h3:hover{
     margin-left: 5px;
     height: 100px;
 }
+/* 
+.desktopContent{
+    /* z-index: 12222; */
+    /* position: absolute; */
+    /* opacity: 50%; */
+    /* border-radius: 10px; */
+    /* top: 300px; */
+    /* left: 150px; */
+    /* width: 750px; */
+    /* height: 350px; */
+    /* background-color: green; */
+    /* box-shadow: inset 0px 0px 20px 20px #13c60d; */
+    /* filter: blur(5px); */
+/* } */
+#d_about, #d_team, #d_projects{
+    position: relative;
+    font-family: 'Dosis';
+    font-size: 21px;
+    width: 800px;
+    color: lightskyblue;
+    top: 300px;
+    left: 155px;
+}
+#d_about h3{
+    color: #13c60d;
+}
+
 
 @media screen and (max-width: 650px) {
     .contact_Section img{

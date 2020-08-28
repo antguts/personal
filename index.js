@@ -1,14 +1,7 @@
-//grabbing each div from the HTML and storing in variable.
-const aboutDiv=document.querySelector('.about_Section')
-const contactDiv= document.querySelector('.contact_Section')
-const projectsDiv= document.querySelector('.projects_Section')
-const teamDiv= document.querySelector('.team_Section')
-
-
 //variable to create GSAP animations
 let tl=new TimelineMax
 
-//runs animation after pageload
+//runs animation after pageload on mobile
 window.addEventListener('load', (event) => {
     tl.to('#one',.6,{top: '0'})
     tl.to('#one',.5,{opacity: 1},'-=.5')
@@ -18,6 +11,7 @@ window.addEventListener('load', (event) => {
 
 //functions to delay type text in the header
 let changeHeaderText=(e)=>{
+        document.querySelector('#location').innerHTML='' 
         // scrolls text in the header
         let name=e.parentNode.className
         for(let i=0;i<name.length;i++){
@@ -34,23 +28,21 @@ let delayLetters=(i,name)=> {
 let deliverContent=(e)=>{
     switch(e.parentNode.className){
         case 'about_Section':
-        case 'about_section_content':
+        // case 'about_section_content':
             aboutContent(e)
             break;
         case 'contact_Section':
             contactContent(e);
             break;
         case 'projects_Section':
-        case 'projects_section_content':
+        // case 'projects_section_content':
             projectsContent(e)
             break;
         case 'team_Section':
-        case 'team_section_content':
+        // case 'team_section_content':
             break;
     }
 }
-
-
 
 //animations for display. 
 let aboutContent=(e)=>{
@@ -89,27 +81,6 @@ let contactContent=(e)=>{
         tl.to('#email,#github,#linkedin',{opacity:0, display: 'none',overFlow: 'hidden'})
     }
 }
-// let aboutContent=()=>{
-    
-// }
-let deskClicked=(e)=>{
-    document.querySelector('#location').innerHTML='' 
-    if(e.id == 'false'){ 
-        // sectionOpen(e)
-        // console.log(e.parentNode.className)
-        changeHeaderText(e)
-        // document.querySelector('#about-info').style.display='revert';
-        // document.querySelector('#about-info').style.opacity=1;
-
-        // deliverContent(e)
-    }else{
-        changeHeaderText(e)
-        // deliverContent(e);
-        // console.log(e.parentNode.className)
-        // sectionClosed(e);
-    }
-}
-
 
 let sectionOpen=(e)=>{
     e.parentNode.style.overflow='auto'
@@ -137,22 +108,43 @@ let sectionClosed=(e)=>{
 
 //checks if opened or not and runs appropriate animation.Using hidden to keep the unopened boxes from shifting when user slides without clicking link.
 let clicked=(e)=>{  
-    document.querySelector('#location').innerHTML='' 
     if(e.id == 'false'){ 
         sectionOpen(e)
-        // deliverContent(e)
         changeHeaderText(e)
     }else{
         sectionClosed(e);
-        // deliverContent(e);
     }
 }
 
+// let fillTeam=()=>{
+//     axios
+//     .get()
+//     .then()
+// }
 
 
 
+let d_click=(e)=>{
+    let current=e.parentNode.className
+    document.querySelector("#d_projects").style.cssText='display: none; opacity: 0; filter: blur(4px);';
+    document.querySelector("#d_about").style.cssText='display: none; opacity: 0; filter: blur(4px);';
+    document.querySelector("#d_team").style.cssText='display: none; opacity: 0; filter: blur(4px);';
+    changeHeaderText(e)
 
+    switch(current){
+        case 'about_section_content':
+            document.querySelector('#d_about').style.display= 'revert'
+            tl.to('#d_about',1,{display: 'revert',opacity:1, webkitFilter:"blur(0px)"})
+            break;
+            case 'projects_section_content':
+                document.querySelector('#d_projects').style.display= 'revert'
+                tl.to('#d_projects',1,{display: 'revert',opacity:1, webkitFilter:"blur(0px)"})
+            break;
+        case 'team_section_content':
+            break;
 
+    }
+}
 
 
 
@@ -160,8 +152,8 @@ let clicked=(e)=>{
 // Post with axios example
 // function(){
 //     axios
-//         .post('https://ironrest.herokuapp.com/antguts', {name: 'anthony', url: ''})
+//         .post('https://ironrest.herokuapp.com/antguts', {first_name: 'Anthony',last_name: 'Gutilla', url: 'https://antguts.github.io/personal/'})
 //         .then((res)=>{
-
+                // console.log('posted')
 //         })
 // }
