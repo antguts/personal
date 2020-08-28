@@ -9,6 +9,7 @@ window.addEventListener('load', (event) => {
     
   });
 
+
 //functions to delay type text in the header
 let changeHeaderText=(e)=>{
         document.querySelector('#location').innerHTML='' 
@@ -148,12 +149,28 @@ let d_click=(e)=>{
 
 
 
+//axios calls==========================================================================================
+let populateTeams=()=>{
+    axios
+    .get("https://ironrest.herokuapp.com/mia-aug2020-webdevs")
+    .then(res=>{
+        res.data.map(r=>{
+            document.querySelector('#d_team ul').innerHTML+=`<li>${r.first_name}<li>`
+            document.querySelector('.team_Section ul').innerHTML+=`<li><a href="${r.website}" target="blank">- ${r.first_name} ${r.last_name} Webpage -</a><li>`
+
+            // document.querySelector('.d_team ul').innerHTML+=pop
+
+        })
+    })
+}
+
+
 
 // Post with axios example
-// function(){
+// function postSite(){
 //     axios
-//         .post('https://ironrest.herokuapp.com/antguts', {first_name: 'Anthony',last_name: 'Gutilla', url: 'https://antguts.github.io/personal/'})
+//         .post('https://ironrest.herokuapp.com/mia-aug2020-webdevs', {first_name: 'Anthony',last_name: 'Gutilla', url: 'https://antguts.github.io/personal/'})
 //         .then((res)=>{
-                // console.log('posted')
+//                 console.log('posted')
 //         })
 // }

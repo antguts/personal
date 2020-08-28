@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Dosis');
 
-
+html{
+    /* z-index: -1233; */
+    /* background-color: green; */
+}
 
 body{
     background-image: url('assets/VSbackground.png');
@@ -37,6 +40,14 @@ h3:hover{
     color: #13c60d;
     height: 3vh;
 }
+#cursor{
+    position: absolute;
+    font-size: 18px;
+    color: white;
+    margin-top: 14px;
+}
+
+
 
 .terminal p{
     font-size: 28px;
@@ -76,6 +87,14 @@ h3:hover{
 }
 
 @media screen and (max-width: 650px) {
+.terminal #cursor{
+    color: white;
+    position: absolute;
+    font-size: 11px;
+    width: 15px;
+    margin-top: 11px;
+    margin-left: 5px;
+}
     #d_team,#d_projects,#d_about{
         display: none;
     }
@@ -156,14 +175,7 @@ h3:hover{
     padding: 0 30px;
 }
 
-.terminal #cursor{
-    color: white;
-    position: absolute;
-    font-size: 11px;
-    width: 15px;
-    margin-top: 18px;
-    margin-left: 5px;
-}
+
 
 
 .main span{
@@ -178,6 +190,7 @@ h3:hover{
 
 /* ABOUT SECTION============================================================================= */
 @media screen and (max-width: 650px) {
+
     h1{
         font-family: 'Times New Roman', Times, serif;
         text-align: left;
@@ -301,7 +314,7 @@ h3:hover{
     /* filter: blur(5px); */
 /* } */
 #d_about, #d_team, #d_projects{
-    position: relative;
+    position: absolute;
     font-family: 'Dosis';
     font-size: 21px;
     width: 800px;
@@ -350,8 +363,9 @@ h3:hover{
 .team_Section{
     border: none;
 }
-
-
+li{
+    list-style: none;
+}
 
 
 
