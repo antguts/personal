@@ -135,13 +135,15 @@ let d_click=(e)=>{
     switch(current){
         case 'about_section_content':
             document.querySelector('#d_about').style.display= 'revert'
-            tl.to('#d_about',1,{display: 'revert',opacity:1, webkitFilter:"blur(0px)"})
+            tl.to('#d_about',1,{opacity:1, webkitFilter:"blur(0px)"})
             break;
             case 'projects_section_content':
                 document.querySelector('#d_projects').style.display= 'revert'
-                tl.to('#d_projects',1,{display: 'revert',opacity:1, webkitFilter:"blur(0px)"})
+                tl.to('#d_projects',1,{opacity:1, webkitFilter:"blur(0px)"})
             break;
         case 'team_section_content':
+            document.querySelector('#d_team').style.display= 'revert'
+            tl.to('#d_team',1,{opacity:1, webkitFilter:"blur(0px)"})
             break;
 
     }
@@ -155,7 +157,7 @@ let populateTeams=()=>{
     .get("https://ironrest.herokuapp.com/mia-aug2020-webdevs")
     .then(res=>{
         res.data.map(r=>{
-            document.querySelector('#d_team ul').innerHTML+=`<li>${r.first_name}<li>`
+            document.querySelector('#d_team ul').innerHTML+=`<li><a href="${r.website}" target="blank">- ${r.first_name} ${r.last_name} Webpage -</a><li>`
             document.querySelector('.team_Section ul').innerHTML+=`<li><a href="${r.website}" target="blank">- ${r.first_name} ${r.last_name} Webpage -</a><li>`
 
             // document.querySelector('.d_team ul').innerHTML+=pop
@@ -163,7 +165,7 @@ let populateTeams=()=>{
         })
     })
 }
-
+// populateTeams()
 
 
 // Post with axios example

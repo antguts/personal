@@ -85,8 +85,14 @@ h3:hover{
 .main{
     display: none;
 }
+.team_section,#d_team{
+    display:none;
+}
 
 @media screen and (max-width: 650px) {
+    .team_section,#d_team{
+        display:none;
+    }
 .terminal #cursor{
     color: white;
     position: absolute;
@@ -360,6 +366,11 @@ h3:hover{
     }
 }
 /* TEAM SECTION============================================================================== */
+
+.team_section,#d_team{
+    display:none;
+}
+
 .team_Section{
     border: none;
 }
