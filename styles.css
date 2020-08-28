@@ -374,7 +374,17 @@ h3:hover{
 .team_Section{
     border: none;
 }
+#d_team a{
+    font-size: 28px;
+    color: #13c60d;
+}
+#d_team a:hover{
+    /* font-size: 28px; */
+    color: #9cdcfe;
+}
+
 li{
+    margin-bottom: 10px;
     list-style: none;
 }
 
