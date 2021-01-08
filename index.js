@@ -134,15 +134,15 @@ let d_click=(e)=>{
 
     switch(current){
         case 'about_section_content':
-            document.querySelector('#d_about').style.display= 'revert'
+            document.querySelector('#d_about').style.display= 'block'
             tl.to('#d_about',1,{opacity:1, webkitFilter:"blur(0px)"})
             break;
             case 'projects_section_content':
-                document.querySelector('#d_projects').style.display= 'revert'
+                document.querySelector('#d_projects').style.display= 'block'
                 tl.to('#d_projects',1,{opacity:1, webkitFilter:"blur(0px)"})
             break;
         case 'team_section_content':
-            document.querySelector('#d_team').style.display= 'revert'
+            document.querySelector('#d_team').style.display= 'block'
             tl.to('#d_team',1,{opacity:1, webkitFilter:"blur(0px)"})
             break;
 
