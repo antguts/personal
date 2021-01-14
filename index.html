@@ -1,126 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anthony Gutilla</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="assets/megaman.png" />
-    <script src="index.js" defer></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>AG</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+    <script src='index.js' defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+
 </head>
+
 <body>
     <div class="container">
-        <!-- TERMINAL INFORMATION AND WINDOW=============================================================== -->
         <div class="terminal">
-            <p>Anthony-Gutilla@DESKTOP~$:<span id="location"></span><span id='cursor'>&lhblk;</span></p>    
-        </div>
-        <!-- Will be the window for desktop terminal -->
-        <div class="terminalScreen"></div>
-        
-
-        <!-- DESKTOP CONTENT================================================================================= -->
-        <div class="deskNav">
-            <img src='assets/mouseCursor.png'>
-            <div class="about_section_content" id='false'><h3 onClick="d_click(this)">About</h3></div>
-            <div class="projects_section_content" id='false'><h3 onClick="d_click(this)">Projects</h3></div>
-            <div class="team_section_content" id='false'><h3 onClick="d_click(this)">Team</h3></div>
-        
-            <div class="desktopContact">
-                <div id="deskEmail">
-                    <a href="mailto: antgut035@gmail.com" target="blank"><img src="assets/emailIcon.png" /></a>
-                    
-                </div>
-                <div id="deskLinkedin">
-                    <a href="https://www.linkedin.com/in/agutilla/" target="blank"><img src="assets/linkedInIcon.png" /></a>
-                    
-                </div>
-                <div id="deskGithub">
-                    <a href="https://github.com/antguts" target="blank"><img src="assets/githubIcon.png" /></a>
-                </div>
-            </div>
-        
-        </div>
-        
-        <!-- <div class='desktopContent'>
-        </div> -->
-
-        <div id="d_about">
-            <p id="Dp1">I am a focused individual looking to improve my skill set within the IT community. I have attended Ironhack's web development bootcamp in Miami while also earning a bachelors in IT forensics at PBSC. I work as a freelance web developer.</p>
-            <p id="Dp2">My IT experience includes project management for a small dev shop specializing in WordPress and WooCommerce. I also worked as a Ruby on Rails developer for the company View-thought. I am hoping to grow on this knowledge and add value wherever my IT path takes me.</p><h3>JavaScript - SCSS - React.js - Java - Express.js - MongoDB - Responsive Design - Node.js - Git - GSAP - HTML/CSS - SQL - SONY VEGAS - Rails</h3>
+            <h1>@Anthony_Gutilla~$:<span id="location"></span><span id='cursor'>&lhblk;</span></h1>    
         </div>
 
-        
-        <div id="d_projects">
-            <a href="https://ironcoin-crypto.com/" target="blank"><p>Iron Coin </p><img src="assets/CryptoCoinSS.png" /></a>
-            <span>Utilizes the Crypto Control API to provide information on crypto currency. This project was developed in React and utilizes API calls to track and calculate information with a basic tensor flow calculation. GSAP is used to animate an updating ticker that displays the highest priced coins in the current market</span>
-            <a href="https://antguts.github.io/Karen/" target="blank"><p>Zombie Karens! </p><img src="assets/zomKarSS.png" /></a>
-            <span>This game was a fun project. An FPS desktop shooter where you battle the hoard of Karens at the park. I utilized GSAP for animations and FL studio for audio editing. This uses DOM manipulation and onclick functions to register shots. I timed the music and shot FX to flow with the game. On level changes the music stops and changes appropriately. </span>
-        </div>
-        
-        <div id="d_team">
-            <ul>
-            </ul>
+        <div class="contactIcons">
+            <img src="./assets/linkedInIcon.png" />
+            <img src="./assets/githubIcon.png" />
+            <img src="./assets/emailIcon.png" />
         </div>
         
 
-        <!-- MOBILE CONTENT======================================================================================== -->
-        <div class='main'>
-            <div class="about_Section">
-                <h1 onClick="clicked(this)" id='false'><span id='one'>Abo</span><span id="closeIcon">&#9166;Ctrl+x</span><span id='two'>ut</span></h1>
-                <div id='about-info'>
-                    <p id="p1">I am a focused individual looking to improve my skill set within the IT community. I have attended Ironhack's web development bootcamp in Miami while also earning a bachelors in IT forensics at PBSC. I work as a freelance web developer.</p>
-                    <p id="p2">My IT experience includes project management for a small dev shop specializing in WordPress and WooCommerce. I also worked as a Ruby on Rails developer for the company View-thought. I am hoping to grow on this knowledge and add value wherever my IT path takes me.</p>
-
-                    <div id="skillset">
-                        <h3>JavaScript - SCSS - React.js - Java - Express.js - MongoDB - Responsive Design - Node.js - Git - GSAP - HTML/CSS - SQL - SONY VEGAS - Rails</h3>
-                    </div>                
-                </div>
-            </div>
-
-
-            <div class="projects_Section">
-                <h1 onClick="clicked(this)" id='false'><span id='one'>Pro</span><span id="closeIcon">&#9166;Alt+F4</span><span id='two'>jects</span></h1>
-                <div class="projectContent">
-                    <p>Iron Coin </p><span>[Utilizes the Crypto Control API to provide information on crypto currency]</span>
-                    <a href="https://ironcoin-crypto.com/" target="blank"><img src="assets/CryptoCoinSS.png" /></a>
-                    <p>Zombie Karens! </p><span>[FPS desktop shooter where you battle the hoard of Karens at the park]</span>
-                    <a href="https://antguts.github.io/Karen/" target="blank"><img src="assets/zomKarSS.png" /></a>
-                </div>
-
-            </div>
-            
-        
-            <div class="contact_Section">
-                <h1 onClick="clicked(this)" id='false'><span id='one'>Con</span><span id="closeIcon">&#9166;cd ..</span><span id='two'>tact</span></h1>
-                <div class="contactContent">
-                    <div id="email">
-                        <a href="mailto: antgut035@gmail.com" target="blank"><img src="assets/emailIcon.png" /></a>
-                    </div>
-                    <div id="linkedin">
-                        <a href="https://www.linkedin.com/in/agutilla/" target="blank"><img src="assets/linkedInIcon.png" /></a>
-                    </div>
-                    <div id="github">
-                        <a href="https://github.com/antguts" target="blank"><img src="assets/githubIcon.png" /></a>
-                    </div>
-                </div>
-                <div id="iconInfo">
-                    <p><span>$</span>Email</p>
-                    <p><span>$</span>Linkedin</p>
-                    <p><span>$</span>Github</p>
-                </div>
-            </div>
-            
-            <div class="team_Section">
-                <h1 onClick="clicked(this)" id='false'><span id='one'>Te</span><span id="closeIcon">&#9166;Ctrl+W</span><span id='two'>am</span></h1>
-                <ul></ul>
-            </div>
-        </div>    
-    </div> 
-    
-
-    
+    </div><!--End Container-->    
 </body>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-       
+
 </html>

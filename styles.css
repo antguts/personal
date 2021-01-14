@@ -1,397 +1,43 @@
-@import url('https://fonts.googleapis.com/css?family=Dosis');
-
-html{
-    /* z-index: -1233; */
-    /* background-color: green; */
+body{
+    background-color: rgb(10, 10, 10);
+}
+.container{
+    font-family: sans-serif;
+    color: white;
+    width: 100%;
+    height: 85vh;
+    margin: 5vh auto;
+    background-color: #1b181899;
+    box-shadow: 0 0 5px 10px #1b181899;
 }
 
-/* body{
-    background-image: url('assets/VSbackground.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom: 0;
-    margin: auto;
-} */
-a{
-    text-decoration: none;
-}
-
-h3:hover{
-    color: #9cdcfe;
-    cursor: pointer;
-}
-.terminalScreen{
+.terminal h1{
     position: absolute;
-    margin-top: 0px;
-    top:0px;
-    left: 0px;
-    width: 1400px;
-    height: 650px;
-    background-image: url('assets/terminalBG.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+    font-size:3vw;
+    margin: 21px 0 0 65px;
 }
-.terminal{
+
+.contactIcons{
     position: absolute;
-    left: 5px;
-    top:20px;
-    z-index: 12;
-    color: #13c60d;
-    height: 3vh;
+    display: block;
+    bottom: 12vh;
+    right: 10vw;
+    /* float: right; */
 }
+
+.contactIcons img{
+    margin: .5vh 1vw;
+    width: 5vw;
+}
+
+
+
 #cursor{
     position: absolute;
-    font-size: 18px;
-    color: white;
+    font-size: 5vh;
     margin-top: 14px;
+    color: rgb(0, 100, 13);
 }
-
-
-
-.terminal p{
-    font-size: 28px;
-    margin: 0;
-}
-.deskNav{
-    box-shadow: 2px 2px grey;
-    position: absolute;
-    font-family: 'arial';
-    font-weight: 100;
-    margin-top: 170px;
-    padding-left: 20px;
-    width: 20%;
-    /* left: 1050px; */
-    /* float: left; */
-    right: 5%;
-    background-color: #f2f2f2;
-    font-weight: lighter;
-    z-index: 30;
-}
-.deskNav h3{
-    font-size: 2.5em;
-    margin: 10px 5px 20px;
-}
-
-.deskNav img{
-    position: absolute;
-    width: 10px;
-}
-
-
-.about_Section,.team_Section,.projects_Section,.contact_Section{
-    display: none;
-}
-
-
-.main{
-    display: none;
-}
-.team_section,#d_team,#d_about{
-    display:none;
-}
-
-@media screen and (max-width: 650px) {
-    .team_section,#d_team{
-        display:none;
-    }
-.terminal #cursor{
-    color: white;
-    position: absolute;
-    font-size: 11px;
-    width: 15px;
-    margin-top: 11px;
-    margin-left: 5px;
-}
-    #d_team,#d_projects,#d_about{
-        display: none;
-    }
-    .main{
-        display: revert;
-    }
-    #desktopTitle{
-        display: none;
-    }
-    .deskNav{
-        display: none;
-    }
-    .terminal{
-        /* font-size: 25px; */
-        background-color: black;
-        top:0;
-        left: 0;
-        position: fixed;
-        width: 100%;
-    }
-    
-    .terminal p{
-        font-size: 17px;
-    }
-
-    body{
-        margin: 0;
-        font-family: 'Dosis';
-        background: none;
-    }
-    .terminalScreen{
-        display: none;
-    }
-    .about_Section, .projects_Section, .contact_Section, .team_Section{
-        position: relative;
-        display: revert;
-        width: 100%;
-        padding-right: 0;
-        height:22vh;
-        text-align: center;
-        border-bottom: 2px solid black;
-    }
-}
-/*End media query */
-
-
-#location{
-    color: white;
-    margin-left: 8px;
-}
-
-#directory{
-    margin-left: 10px;
-    color: white;
-}
-
-
-
-#one,#two{
-    position: relative;
-    opacity: 0;
-    z-index: 1;
-}
-
-#one{
-    top: -5vh;
-}
-
-#two{
-    top: 5vh;
-}
-
-#closeIcon{
-    display: none;
-    font-size: 28px;
-    top:'-76px';
-    opacity: 0;
-    padding: 0 30px;
-}
-
-
-
-
-.main span{
-    font-family: 'Dosis';
-}
-
-.main{
-    padding-top: 20px;
-}
-
-
-
-/* ABOUT SECTION============================================================================= */
-@media screen and (max-width: 650px) {
-
-    h1{
-        font-family: 'Times New Roman', Times, serif;
-        text-align: left;
-        color: #13c60d;
-        margin: 0;
-        font-size: 75px;
-    }
-    #about-info{
-        color: white;
-        width: 80%;
-        margin: auto;
-    }
-    #p1,#p2,#p3,#skillset{
-        opacity: 0;
-    }
-    #skillset h3{
-        font-size: 17px;
-        margin-top: 22px;
-        color: #13c60d;
-    }
-    .about_Section #cursor{
-        position: absolute;
-        margin: 7px 6px 0;
-        color: white;
-        font-size: 11px;
-    }
-}
-
-
-
-
-/* PROJECT SECTION========================================================================= */
-
-#d_projects{
-    position: absolute;
-    opacity: 0;
-    filter: blur(4px);
-}
-#d_projects img{
-    float: right;
-    width: 300px;
-}
-#d_projects p{
-    width: 200px;
-}
-#d_projects a{
-    color: #13c60d;
-}
-
-
-
-@media screen and (max-width: 650px) {
-    .projectContent{
-        opacity: 0;
-    }
-    .projectContent p{
-        margin:1px 0 1px;
-        color: #13c60d;
-    }
-
-    .projectContent span{
-        border-top: 1px solid #13c60d;
-        padding-top: 2px;
-        font-size: 12px;
-        color: white;
-    }
-
-    .projects_Section img{
-        margin-top: 10px;
-        width: 250px;
-        border: solid #13c60d 1px;
-        border-radius: 6px;
-    }
-}
-            
-/* CONTACT SECTION=================================================================== */
-
-.desktopContact{
-    /* position: relative; */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    top: 280px;
-    right: 0;
-    width: 75%;
-    z-index: 2;
-    /* overflow-x: scroll;
-    overflow-y: hidden; */
-}
-.desktopContact img{
-    width: 45px;
-}
-.desktopContact img:hover{
-    margin-top: -10px;
-    margin-left: -5px;
-    width: 25%;
-}
-
-.desktopContact p{
-    margin-top: 110px;
-    margin-left: 25px;
-    right: 5px;
-    color: green;
-}
-
-
-#deskGithub,#deskLinkedin,#deskEmail{
-    margin-left: 5px;
-    height: 100px;
-}
-/* 
-.desktopContent{
-    /* z-index: 12222; */
-    /* position: absolute; */
-    /* opacity: 50%; */
-    /* border-radius: 10px; */
-    /* top: 300px; */
-    /* left: 150px; */
-    /* width: 750px; */
-    /* height: 350px; */
-    /* background-color: green; */
-    /* box-shadow: inset 0px 0px 20px 20px #13c60d; */
-    /* filter: blur(5px); */
-/* } */
-#d_about, #d_team, #d_projects{
-    position: absolute;
-    font-family: 'Dosis';
-    font-size: 21px;
-    width: 60%;
-    color: lightskyblue;
-    top: 150px;
-    left: 5%;
-}
-#d_about h3{
-    color: #13c60d;
-}
-
-
-@media screen and (max-width: 650px) {
-    .contact_Section img{
-        width: 90px;
-    }
-    .contact_Section p{
-        opacity: 0;
-        font-size: 23px;
-        word-spacing: 1em;
-        color: white;
-    }
-
-    .contactContent{
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding: 5px 30px 0;
-    }
-    .contactContent > div{
-        opacity: 0;
-        margin-top: 180px;
-    }
-
-    #iconInfo{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 42px;
-    }
-    .contact_Section span{
-        color:#13c60d;
-    }
-}
-/* TEAM SECTION============================================================================== */
-
-.team_section,#d_team{
-    display:none;
-}
-
-.team_Section{
-    border: none;
-}
-#d_team a{
-    font-size: 28px;
-    color: #13c60d;
-}
-#d_team a:hover{
-    /* font-size: 28px; */
-    color: #9cdcfe;
-}
-
-li{
-    margin-bottom: 10px;
-    list-style: none;
-}
-
 
 
 
@@ -402,6 +48,7 @@ li{
     -moz-animation:    cursor-blink 1s infinite; /* Fx 5+ */
     -o-animation:      cursor-blink 1s infinite; /* Opera 12+ */
     animation:         cursor-blink 1s infinite; /* IE 10+, Fx 29+ */
+    
   }
 
 
