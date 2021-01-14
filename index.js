@@ -1,5 +1,18 @@
 
 
+// gsap.registerPlugin(MotionPathPlugin);
+// Nav button hovering
+// let S = [{scale:1.1},{scale:1.02},{scale:1.2}];
+
+// let btn= document.querySelectorAll("#btn")
+// $(btn).hover(enter,out);
+// function enter(){
+//   TweenMax.to(this,0.5,{opacity: 1});
+// };
+// function out(){
+//   TweenMax.to(this,{opacity:.5})
+// };
+
 
 //functions to delay type text in the header
 let changeHeaderText=(e)=>{

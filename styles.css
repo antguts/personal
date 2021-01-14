@@ -28,6 +28,10 @@ body{
     margin: 7vh 0;
 }
 
+.bio{
+
+}
+
 .terminal h1{
     position: absolute;
     font-size:3vw;
@@ -38,21 +42,35 @@ body{
     position: absolute;
     display: block;
     bottom: 12vh;
-    right: 10vw;
+    right: 12vw;
 }
 
 .contactIcons img{
     margin: .5vh 1vw;
-    width: 5vw;
+    width: 4vw;
+    opacity: .6;
 }
 
 .contentDisplay{
     position: absolute;
-    border: 1px solid rgb(201, 196, 196);
+    /* border: 1px solid rgb(201, 196, 196); */
     bottom: 14vh;
     left: 4.5vw;
     width: 55vw;
-    height: 55vh; 
+    height: 55vh;
+    box-shadow: -1px 1px 10px 5px #1b181899; 
+}
+
+.contentDisplay::before{
+    content: "";
+    background-image: url('assets/keyboardBG.jpeg');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.04;
 }
 
 #cursor{
@@ -94,3 +112,7 @@ body{
     50%  {opacity: 1;}
     100% { opacity: 0; }
   }
+
+
+
+    

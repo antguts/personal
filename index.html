@@ -7,7 +7,8 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
     <script src='index.js' defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
 
 </head>
 
@@ -15,7 +16,7 @@
     <div class="container">
         <!-- Navigation buttons -->
         <div class="navButtons">
-            <div class="bio">Bio</div>
+            <div class="bio" onClick="d_test()">About</div>
             <div class="projects">Projects</div>
             <div class="resume">Resume</div>
         </div>
@@ -27,13 +28,23 @@
 
         <!-- Contact icon roles -->
         <div class="contactIcons">
-            <img src="./assets/linkedInIcon.png" />
-            <img src="./assets/githubIcon.png" />
-            <img src="./assets/emailIcon.png" />
+            <a href="" id="btn" ><img src="./assets/linkedInIcon.png" /></a>
+            <a href="" id="btn"><img src="./assets/githubIcon.png" /></a>
+            <a href="" id="btn"><img src="./assets/emailIcon.png" /></a>
         </div>
         
         <div class="contentDisplay">
             <h1>content contentDisplay</h1>
+            <div class="aboutSection">
+                <p>A personal website for me to share things related to programming and practice new techniques. </p>
+                <h2>Thanks for Visiting</h2>
+            </div>
+            <div class="projectSection">
+                
+            </div>
+            <div class="resumeSection">
+                
+            </div>
         </div>
 
 
