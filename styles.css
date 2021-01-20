@@ -1,5 +1,6 @@
 body{
     background-color: #160d0d;
+    overflow: hidden;
 }
 .container{
     font-family: sans-serif;
@@ -81,10 +82,15 @@ body{
     margin-top: 25vh;
 }
 
+#location{
+    color: rgb(28, 199, 5);
+    margin-left: 1vw;
+}
 
 #cursor{
     position: absolute;
-    font-size: 4vh;
+    margin-left: 5px;
+    font-size: 2vh;
     bottom: 0;
     color: rgb(10, 172, 32);
 }
@@ -98,10 +104,9 @@ body{
 
 div .leftAboutBorder, div .rightAboutBorder{
     position: absolute;
-    content: "";
     background-color: green;
-    /* height: 25%; */
-    width: 25%;
+    height: 1%;
+    width: 5%;
 }
 
 div .rightAboutBorder{
@@ -112,7 +117,10 @@ div .rightAboutBorder{
 
 
 h2{
+    padding: 2vh 0;
     transition: all .3s ease-in-out;
+    z-index: 2;
+    cursor: pointer;
 }
 h2:hover{
     color: rgb(9, 197, 9);
