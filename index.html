@@ -15,15 +15,37 @@
 <body>
     <div class="container">
         <!-- Navigation buttons -->
-        <div class="navButtons">
-            <div class="bio" onClick="d_test()">About</div>
-            <div class="projects">Projects</div>
-            <div class="resume">Resume</div>
-        </div>
+        <!-- <div class="navButtons">
+            <a href="" class="about" onClick="aboutClick()">About</a>
+            <a href="" class="projects" onClick="projectsClick()">Projects</a>
+            <a href="" class="resume" onClick="resumeClick()">Resume</a> -->
+            <!-- Lines for nav click animations -->
+            <!-- <div id="aboutLine"></div>
+            <div id="projectLine"></div>
+            <div id="resumeLine"></div>
+        </div> -->
+
 
         <!-- Scrolling terminal header -->
         <div class="terminal">
             <h1>@Anthony_Gutilla~$:<span id="location"></span><span id='cursor'>&lhblk;</span></h1>    
+        </div>
+        
+        <div class="contentDisplay">
+            <div class="aboutSection">
+                <div class="leftAboutBorder">a</div>
+                <div class="rightAboutBorder">a</div>
+
+                <h2 onClick="aboutClick(this)">About</h2>
+            </div>
+
+            <div class="projectSection">
+                <h2 onClick="projClick(this)">Projects</h2>
+            </div>
+
+            <div class="resumeSection">    
+                <h2 onClick="resClick(this)">Resume</h2>
+            </div>
         </div>
 
         <!-- Contact icon roles -->
@@ -33,19 +55,6 @@
             <a href="" id="btn"><img src="./assets/emailIcon.png" /></a>
         </div>
         
-        <div class="contentDisplay">
-            <h1>content contentDisplay</h1>
-            <div class="aboutSection">
-                <p>A personal website for me to share things related to programming and practice new techniques. </p>
-                <h2>Thanks for Visiting</h2>
-            </div>
-            <div class="projectSection">
-                
-            </div>
-            <div class="resumeSection">
-                
-            </div>
-        </div>
 
 
     </div><!--End Container-->    

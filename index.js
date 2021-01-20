@@ -1,5 +1,15 @@
 
 
+const aboutClick=()=>{
+    alert(this);
+}
+const projClick=()=>{
+    alert("projects");
+}
+const resClick=()=>{
+    alert("resume");
+}
+
 // gsap.registerPlugin(MotionPathPlugin);
 // Nav button hovering
 // let S = [{scale:1.1},{scale:1.02},{scale:1.2}];

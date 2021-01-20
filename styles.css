@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(10, 10, 10);
+    background-color: #160d0d;
 }
 .container{
     font-family: sans-serif;
@@ -7,79 +7,117 @@ body{
     width: 100%;
     height: 85vh;
     margin: 5vh auto;
-    background-color: #1b181899;
+    background-color: #444444;
     box-shadow: 0 0 5px 10px #1b181899;
 }
-
+/* 
 .navButtons{
     top: 8vh;
     width: 18vw;
-    /* border: 3px solid green; */
     position: absolute;
     right: 12vw;
     text-align: center;
 }
 
-.navButtons div{
+.navButtons a{
+    display: block;
+    text-decoration: none;
+    color: white;
     opacity: .5;
     border: 1px solid rgb(201, 196, 196);
     padding: 2vh 0;
     font-size: 6vh;
     margin: 7vh 0;
-}
+} */
+/* #aboutLine,#projectLine,#projectLine{
+    content: " ";
+    border: solid white 2px;
+    width: 10%;
+} */
 
-.bio{
-
-}
 
 .terminal h1{
     position: absolute;
-    font-size:3vw;
-    margin: 21px 0 0 65px;
+    font-size:2vw;
+    left: 4.5vw;
+    margin-top: 21px;
 }
 
 .contactIcons{
     position: absolute;
-    display: block;
-    bottom: 12vh;
-    right: 12vw;
+    display: grid;
+    bottom: 25vh;
+    clear: both;
+    right: 15vw;
 }
 
 .contactIcons img{
-    margin: .5vh 1vw;
-    width: 4vw;
+    /* margin: .5vh 1vw; */
+    margin: 2.5vh auto;
+    width: 3.5vw;
     opacity: .6;
 }
 
 .contentDisplay{
-    position: absolute;
-    /* border: 1px solid rgb(201, 196, 196); */
-    bottom: 14vh;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    /* bottom: 20vh; */
+    top: 17vh;
     left: 4.5vw;
-    width: 55vw;
+    width: 75vw;
     height: 55vh;
     box-shadow: -1px 1px 10px 5px #1b181899; 
 }
 
-.contentDisplay::before{
-    content: "";
-    background-image: url('assets/keyboardBG.jpeg');
-    background-size: cover;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.04;
+
+.contentDisplay div{
+    width: 100%;
 }
+
+.contentDisplay h2{
+    font-size: 2vw;
+    margin-top: 25vh;
+}
+
 
 #cursor{
     position: absolute;
     font-size: 4vh;
     bottom: 0;
-    color: rgb(0, 100, 13);
+    color: rgb(10, 172, 32);
 }
 
+.aboutSection{
+    position: relative;
+}
+
+
+/* Divs for "border" animation */
+
+div .leftAboutBorder, div .rightAboutBorder{
+    position: absolute;
+    content: "";
+    background-color: green;
+    /* height: 25%; */
+    width: 25%;
+}
+
+div .rightAboutBorder{
+    right: 0;
+    bottom: 0;
+}
+
+
+
+h2{
+    transition: all .3s ease-in-out;
+}
+h2:hover{
+    color: rgb(9, 197, 9);
+    transform: scale(1.4);
+}
 
 
 /* Blinking cursor in terminal=========================================== */
@@ -112,7 +150,3 @@ body{
     50%  {opacity: 1;}
     100% { opacity: 0; }
   }
-
-
-
-    
