@@ -1,15 +1,16 @@
 body{
-    background-color: #160d0d;
+    /* font-family: 'Oswald'; */
+    background-color: #444444;
     overflow: hidden;
 }
 .container{
-    font-family: sans-serif;
+    font-family: 'Oswald';
     color: white;
     width: 100%;
     height: 85vh;
     margin: 5vh auto;
     background-color: #444444;
-    box-shadow: 0 0 5px 10px #1b181899;
+    box-shadow: 0 0 5px 5px #46434399;
 }
 /* 
 .navButtons{
@@ -42,6 +43,7 @@ body{
     font-size:2vw;
     left: 4.5vw;
     margin-top: 21px;
+    color:  #26af34;
 }
 
 .contactIcons{
@@ -57,6 +59,15 @@ body{
     margin: 2.5vh auto;
     width: 3.5vw;
     opacity: .6;
+    border-radius: 8vw;
+}
+
+a:first-child img{
+    border-radius: 4px;
+}
+
+.contactIcons img:hover{
+    box-shadow: -1px 1px 20px 15px #24952f;
 }
 
 .contentDisplay{
@@ -69,7 +80,7 @@ body{
     left: 4.5vw;
     width: 75vw;
     height: 55vh;
-    box-shadow: -1px 1px 10px 5px #1b181899; 
+    /* box-shadow: -1px 1px 10px 5px #1b181899;  */
 }
 
 
@@ -82,8 +93,65 @@ body{
     margin-top: 25vh;
 }
 
+.hiddenMenu{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    overflow: hidden;
+
+}
+
+.hiddenMenu h1{
+    z-index: 5;
+    color: rgb(0, 219, 73);
+    opacity: .8;
+    height: 10vh;
+    font-size: 2.5vw;
+    margin-bottom: 0;
+    width: 50%;
+    /* overflow: hidden; */
+}
+
+.hiddenName1, .hiddenName2{
+    /* position: absolute; */
+    position: absolute;
+    top: 15vh;
+    /* z-index: 200; */
+    margin-bottom: 20px;
+}
+
+span:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.strings{
+    position: absolute;
+    /* background-color: green; */
+    right: 1vw;
+    width: 5%;
+    height: 10px;
+}
+
+.string1, .string2{
+    position: absolute;
+    height: 10px;
+    width: 2.5%;
+    background-color: orange;
+    height: 0;
+    z-index: 4;
+}
+
+.string1{
+    right: 17vw;
+}
+.string2{
+    right: 8vw;
+}
+
+
 #location{
-    color: rgb(28, 199, 5);
+    color: #26af34;
     margin-left: 1vw;
 }
 
@@ -97,6 +165,11 @@ body{
 
 .aboutSection{
     position: relative;
+    
+}
+
+.aboutSection:before{
+    opacity: .5;
 }
 
 
@@ -104,8 +177,8 @@ body{
 
 div .leftAboutBorder, div .rightAboutBorder{
     position: absolute;
-    background-color: green;
-    height: 1%;
+    background-color: rgb(80, 80, 80);
+    height: 0;
     width: 5%;
 }
 
@@ -122,10 +195,26 @@ h2{
     z-index: 2;
     cursor: pointer;
 }
+
+
 h2:hover{
     color: rgb(9, 197, 9);
-    transform: scale(1.4);
+    transform: scale(1.4);    
 }
+
+
+.dropScreen{
+    position: absolute;
+    background-color: brown;
+    width: 100%;
+    /* height: 2vh;  */
+    bottom: 0;
+}
+
+
+/* ANIMATIONS=========================================================== */
+
+
 
 
 /* Blinking cursor in terminal=========================================== */

@@ -6,6 +6,8 @@
     <title>AG</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
     <script src='index.js' defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
@@ -30,30 +32,49 @@
         <div class="terminal">
             <h1>@Anthony_Gutilla~$:<span id="location"></span><span id='cursor'>&lhblk;</span></h1>    
         </div>
+
         
         <div class="contentDisplay">
+            <div class="strings">
+                <span class="string1"></span>
+                <span class="string2"></span>
+            </div>
+            
             <div class="aboutSection">
                 <div class="leftAboutBorder"><h2></h2></div>
                 <h2 onClick="aboutClick(this)">About</h2>
                 <div class="rightAboutBorder"><h2></h2></div>
-
             </div>
-
+            
             <div class="projectSection">
                 <h2 onClick="projClick(this)">Projects</h2>
             </div>
-
+            
             <div class="resumeSection">    
                 <h2 onClick="resClick(this)">Resume</h2>
             </div>
+            
+            
+            <!-- Menu that comes after initial menu selection======================== -->
+            <div class="hiddenMenu">
+                <h1><span class="hiddenName1" onClick="secondMenu1(this)"></span></h1>
+                <h1><span class="hiddenName2" onClick="secondMenu2(this)"></span></h1>
+            </div>
+            
+
+            <!-- Dropscreen============================== -->
+            <div class="dropScreen"><span></span></div>
+
+
         </div>
 
         <!-- Contact icon roles -->
         <div class="contactIcons">
-            <a href="" id="btn" ><img src="./assets/linkedInIcon.png" /></a>
-            <a href="" id="btn"><img src="./assets/githubIcon.png" /></a>
-            <a href="" id="btn"><img src="./assets/emailIcon.png" /></a>
+            <a href="" id="contactIcon" ><img src="./assets/linkedInIcon.png" /></a>
+            <a href="" id="contactIcon"><img src="./assets/githubIcon.png" /></a>
+            <a href="" id="contactIcon"><img src="./assets/emailIcon.png" /></a>
         </div>
+
         
 
 
