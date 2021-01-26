@@ -5,33 +5,32 @@ let abClicked = false
 let projClicked = false
 let resClicked = false
 
+// Other variables===========================
+let currentPageColor= 'green'
+
+
 
 //Reusable===============================================
 
 const hiddenMenuAnimation =()=>{
     tl.to('.hiddenName1, .hiddenName2',1,{top:'5vh', ease:Power4.easeOut})
-    tl.to('.hiddenName1',1.5,{top: '-2vh', right:'40vh', ease:Power4.easeOut},'-=1')
-    tl.to('.hiddenName2',1.5,{right:'15vh', ease:Power4.easeOut},'-=1.5')
 }
 
-const setMenu=(name1,name2,color,bgColor)=>{
+const setMenu=(name1,name2,color,bgColor,heading)=>{
+    currentPageColor=color
+
     tl.to('#location, #cursor,.hiddenName1, .hiddenName2',{color: color})
     .to('.dropScreen',{backgroundColor: bgColor })
+    .to('svg',.5,{fill: color},'-=1')
     .add(()=> document.querySelector('.hiddenName1').innerHTML = name1)
     .add(()=> document.querySelector('.hiddenName2').innerHTML = name2)
     .add(()=> {
         document.querySelector('.string1').style.backgroundColor = color
-        document.querySelector('.string2').style.backgroundColor = color
 
     })
 
 
 }
-
-// const dropBG=(bginfo)=>{
-//     document.querySelector('.dropScreen').style.backgroundColor = bginfo
-// }
-
 
 
 // Click Events========================================================
@@ -56,7 +55,7 @@ const aboutClick=(e)=>{
         .to('.leftAboutBorder', .4,{width: '290%'})
         .to('.rightAboutBorder', .4,{marginRight: '-190%', width: '290%'},'-=.4')
         
-        .to('.dropScreen', .4,{height: '100%', opacity: .5})
+        .to('.dropScreen', .4,{height: '100%'})
 
         .to('.leftAboutBorder', .4, {height: '0', width: '5%'})
         .to('.rightAboutBorder', .4,{height: '0', width: '5%', marginRight: 0},'-=.3')
@@ -66,6 +65,8 @@ const aboutClick=(e)=>{
 
     // Change text on header changes with GSAP animation================================
     changeHeaderText("About_Section")
+    document.querySelector('.aboutInfo').style.display='inline-block'
+    tl.to('.aboutInfo',.5,{opacity: 1, marginTop: '8vh'},'-=.3')
 }
 
 const projClick=()=>{
@@ -99,40 +100,59 @@ const checkMenu=(e)=>{
             break;
     }
 }
-const secondMenu1=(e)=>{
-    tl.to('.string1',.3,{height: '55vh'})
+
+const removeContent=(e)=>{
+
+    
+    switch(e.innerHTML){
+        case 'Resume':
+            tl.to('.aboutInfo',.5,{margin: '3vh auto',display: 'none',opacity: 0})
+            
+            break;
+        case 'About':
+            break;
+        case 'Projects':
+            
+            break;
+    }
+}
+const secondMenuSelect=(e)=>{
+    tl
+        .to('.string1',.3,{height: '55vh'})
         .to('.hiddenName1, .hiddenName2',.2,{top: '15vh'},'-=.2')
         .to('.string1',.3,{height: '0'})
+        .add(removeContent(e))
         .to('.dropScreen',.5,{height: 0})
-        .add(checkMenu(e.innerHTML),'+=5')
-    
-        
-}
-const secondMenu2=(e)=>{
-    tl.to('.string2',.3,{height: '55vh'})
-        .to('.hiddenName1, .hiddenName2',.2,{top: '15vh'},'-=.2')
-        .to('.string2',.3,{height: '0'})
-        .to('.dropScreen',.5,{height: 0})
-        .add(checkMenu(e.innerHTML),'+=5')
+        .add(checkMenu(e.innerHTML),'+=5')       
 }
 
 // Side menu events============================================================
 
     
-const screenRaise=()=>{tl.to('.dropScreen',.5,{height: '100%'})}
+const screenRaise=()=>{
+    tl.to('.dropScreen',.5,{height: '100%'})
+      .to('.hiddenName1, .hiddenName2',.2,{top: '5vh'})
+
+}
 const aboutSide=()=>{
-    setMenu('Resume','Projects','orange','grey','About_Section')
-    // changeHeaderText('About_Section')
+    console.log('boutSide')
+    setMenu('Resume','Projects','orange','grey')
+    changeHeaderText('About_Section')
     screenRaise()
+    document.querySelector('.aboutInfo').style.display='inline-block'
+    tl.to('.aboutInfo',.5,{opacity: 1, marginTop: '8vh'})
+
 }
 const projectsSide=()=>{
-    setMenu('Resume','About','red','black','Projects_Section')
-    // changeHeaderText('Projects_Section')
+    console.log('projSide')
+    setMenu('Resume','About','#00d8fb','#7206b5')
+    changeHeaderText('Projects_Section')
     screenRaise()
 }
 const resumeSide=()=>{
-    setMenu('About','Projects','grey','orange','Resume_Section')
-    // changeHeaderText('Resume_Section')
+    console.log('resSide')
+    setMenu('About','Projects','black','orange')
+    changeHeaderText('Resume_Section')
     screenRaise()
 }
 
@@ -193,16 +213,10 @@ $(".resumeSection").hover(projectsBorderHover,projectsBorderHoverOut)
 
 
 
-$(".hiddenName1").hover(
-    ()=>{tl.to('.string1',.2,{height: '25vh', ease:Power4.easeOut})}
+$(".hiddenName1, .hiddenName2").hover(
+    ()=>{tl.to('.string1',.2,{height: '40vh', ease:Power4.easeOut})}
     ,
     ()=>{tl.to('.string1',.2,{height: '0'})}
-)
-
-$(".hiddenName2").hover(
-    ()=>{tl.to('.string2',.2,{height: '35vh',ease:Power4.easeOut})}
-    ,
-    ()=>{tl.to('.string2',.2,{height: '0'})}
 )
 
 
