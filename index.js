@@ -150,7 +150,7 @@ const projectsSide=()=>{
     screenRaise()
 }
 const resumeSide=()=>{
-    setMenu('About','Projects','#2f7dd0','#f1d5a3')
+    setMenu('About','Projects','#2f7dd0','rgb(198 216 220)')
     changeHeaderText('Resume_Section')
     screenRaise()
     tl.to('.resumeInfo',.5,{display: 'block',opacity: 1, marginTop: '2vh'})

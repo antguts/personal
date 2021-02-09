@@ -72,7 +72,7 @@ body{
         bottom: 30vh;
         margin-left: 2vw;
         clear: both;
-        right: 13vw;
+        right: 10vw;
     }
     .contactIcons svg{
         padding-right: 20px;
@@ -110,10 +110,10 @@ body{
         display: flex;
         justify-content: space-evenly;
         text-align: center;
-        top: 17vh;
+        top: 13vh;
         left: 4.5vw;
         width: 75vw;
-        height: 60vh;
+        height: 68vh;
 
         box-shadow: 0 8px 32px 0 #858383;
         backdrop-filter: blur( 4px );
@@ -208,7 +208,7 @@ body{
     .hiddenMenu{
         position: absolute;
         width: 100%;
-        bottom: 15px;
+        bottom: 8px;
         display: flex;
         overflow: hidden;
 
@@ -307,9 +307,11 @@ body{
         overflow: hidden;
     }
     #resButtons{
-        display: flex;
+        position: absolute;
+        left: 0;
+        /* display: flex; */
         justify-content: center;
-        margin-top: 15px;
+        /* margin-top: 1px; */
         /* border-bottom: .5px solid grey; */
         margin-bottom: 30px;
     }
@@ -317,8 +319,9 @@ body{
         /* opacity: .5; */
         color: rgb(47 125 208);
         margin-bottom: 5px;
+        margin-top: 5px;
         box-shadow: 5px 5px 15px 0;
-        padding: 10px;
+        padding: 0 10px;
         width: 12vw;
         cursor: pointer;
     }
@@ -333,12 +336,18 @@ body{
     }
 
     #resContent{
-        margin: auto;
+        position: absolute;
+        right: 20px;
+
+        /* margin: auto; */
         text-align: left;
-        width: 70%;
+        width: 65%;
         height: 77%;
+        margin-bottom: 10px;
         /* border: 1px solid yellow; */
-        /* overflow: scroll; */
+        /* box-shadow: 0px 10px 20px 2px black; */
+        z-index: 35;
+        overflow: auto;
     }
 
 
@@ -348,6 +357,7 @@ body{
     }
 
     .resumeInfo p{
+        font-size: 2.5vh;
         margin-left: 35px;
         /* opacity: 0; */
         color: rgb(156, 149, 149);
@@ -356,16 +366,16 @@ body{
     .resumeInfo h4{
         /* margin-left: 30px; */
         margin-bottom: 5px;
-        width: 40%;
+        width: 50%;
         color: rgb(47 125 208);
         border-bottom: .5px solid rgb(47 125 208);
-        font-size: 23px;
+        font-size: 3vh;
     }
 
     /* SCROLLBAR FOR OVERFLOW======================================== */
     /* width */
     ::-webkit-scrollbar {
-        width: 15px;
+        width: 8px;
     }
     
     /* Track */
