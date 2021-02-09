@@ -74,20 +74,34 @@ body{
         clear: both;
         right: 13vw;
     }
+    .contactIcons svg{
+        padding-right: 20px;
+    }
 
     a:first-child img{
         border-radius: 4px;
     }
 
-    .contactIcons img:hover{
+    /* .contactIcons svg:hover{
         box-shadow: -1px 1px 20px 15px #24952f;
-    }
+    } */
 
     svg{
+        /* position: absolute; */
+        opacity: .7;
         width: 4vw;
         height: auto;
         margin-bottom: 15px;
         fill: #24952f;
+        border-right: 1px solid transparent;
+    }
+
+    svg:hover{
+        /* position: absolute; */
+        /* margin-left: 15px; */
+        transition-duration: .5s;
+        opacity: 1;
+        border-right: 1px solid rgb(122, 120, 120);
     }
 
     /* Content display =================================================== */
@@ -129,11 +143,13 @@ body{
 
     /* Divs for "border" animation */
 
-    div .leftAboutBorder, div .rightAboutBorder{
+    div .leftAboutBorder, div .rightAboutBorder,
+    div .leftResBorder, div .rightResBorder,
+    div .leftProjBorder, div .rightProjBorder{
         position: absolute;
         background-color: #5f5c5c;
         height: 0;
-        width: 5%;
+        width: 0;
         border-radius: 0 0 10px 0;
     }
 
@@ -142,6 +158,34 @@ body{
         bottom: 0;
         border-radius: 10px 0 0 0;
     }
+
+    div .leftProjBorder,div .rightProjBorder{
+        background-color: rgb(114, 6, 181);
+        width: 10%;
+        left: 50%;
+        border-radius: 0 0 10px 10px;
+    }
+    div .rightProjBorder{
+        bottom: 0;
+        border-radius: 10px 10px 0 0;
+    }
+
+    div .leftResBorder, div .rightResBorder{
+        background-color: rgb(241, 213, 163);
+        top: 45%;
+        height: 15%;
+        border-radius: 0 10px 10px 0;
+    }
+    div .leftResBorder{
+        right:0;
+        border-radius: 10px 0 0 10px;
+    }
+    /* div .leftProjBorder{
+        bottom: 0;
+    } */
+
+    div .rightResBorder{}
+
 
 
 

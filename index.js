@@ -18,6 +18,7 @@ const hiddenMenuAnimation =()=>{
 
 const setMenu=(name1,name2,color,bgColor,heading)=>{
     console.log(color)
+    
     tl.to('.contentDisplay',{boxShadow: `0 8px 32px 0 ${color}`})
     .to('#location, #cursor,.hiddenName1, .hiddenName2',{color: color},'-=.3')
     .to('.dropScreen',{backgroundColor: bgColor })
@@ -176,14 +177,14 @@ const aboutBorderHoverOut =()=>{
 const resumeBorderHover =()=>{
     if(!abClicked){
         // tl.to('.leftAboutBorder, .rightAboutBorder',{height: '1%'})
-        tl.to('.leftAboutBorder', .3,{height: '25%', width: '25%'},'-=.1')
-        tl.to('.rightAboutBorder', .3,{height: '25%', width: '25%'}, '-=.3')
+        tl.to('.leftResBorder', .3,{width: '25%'},'-=.1')
+        tl.to('.rightResBorder', .3,{width: '25%'}, '-=.3')
     }
 } 
 
 const resumeBorderHoverOut =()=>{
     if(!abClicked){
-        tl.to('.rightAboutBorder, .leftAboutBorder', .5,{height: '0%', width: '5%'})
+        tl.to('.rightResBorder, .leftResBorder', .5,{ width: '0%'})
     }
 } 
 
@@ -191,16 +192,31 @@ const resumeBorderHoverOut =()=>{
 const projectsBorderHover =()=>{
     if(!abClicked){
         // tl.to('.leftAboutBorder, .rightAboutBorder',{height: '1%'})
-        tl.to('.leftAboutBorder', .3,{height: '25%', width: '25%'},'-=.1')
-        tl.to('.rightAboutBorder', .3,{height: '25%', width: '25%'}, '-=.3')
+        tl.to('.leftProjBorder', .3,{height: '25%'},'-=.1')
+        tl.to('.rightProjBorder', .3,{height: '25%'}, '-=.3')
     }
 } 
 
 const projectsBorderHoverOut =()=>{
     if(!abClicked){
-        tl.to('.rightAboutBorder, .leftAboutBorder', .5,{height: '0%', width: '5%'})
+        tl.to('.rightProjBorder, .leftProjBorder', .5,{height: '0'})
     }
 } 
+
+
+// jquery==============================================================
+
+$(".aboutSection").hover(aboutBorderHover,aboutBorderHoverOut)
+$(".projectSection").hover(projectsBorderHover,projectsBorderHoverOut)
+$(".resumeSection").hover(resumeBorderHover,resumeBorderHoverOut)
+
+
+
+$(".hiddenName1, .hiddenName2").hover(
+    ()=>{tl.to('.string1',.2,{height: '40vh', ease:Power4.easeOut})}
+    ,
+    ()=>{tl.to('.string1',.2,{height: '0'})}
+)
 
 
 
@@ -219,11 +235,18 @@ const resButtonClick=(e)=>{
             break;
         case 'EXPERIENCE':
             document.querySelector('#resContent').innerHTML= 
-                '<h4>In the past</h4>'
+                '<h4>In the past</h4> \
+                <p>- Event coordination at upscale hotel in south Florida.</p>  \
+                <p>- Managing custom projects ranging from WP/Woocommerce builds to legacy DB conversions.</p>  \
+                <p>- Assistant R&R developer, servicing high volume meal delivery startups.</p> \
+                <p>- Water level management in south Florida. Data gathering by combining robitics with various programs.</p> \
+                '
             break;
         case 'ABOUT ME':
             document.querySelector('#resContent').innerHTML= 
-                '<h4>Aspirations</h4>'
+                '<h4>Aspirations</h4>\
+                <p>Expanding my knowledge while</p>\
+                '
             break;
 
     }
@@ -235,20 +258,6 @@ const resButtonClick=(e)=>{
 
 }
 
-
-// jquery==============================================================
-
-$(".aboutSection").hover(aboutBorderHover,aboutBorderHoverOut)
-$(".projectSection").hover(resumeBorderHover,resumeBorderHoverOut)
-$(".resumeSection").hover(projectsBorderHover,projectsBorderHoverOut)
-
-
-
-$(".hiddenName1, .hiddenName2").hover(
-    ()=>{tl.to('.string1',.2,{height: '40vh', ease:Power4.easeOut})}
-    ,
-    ()=>{tl.to('.string1',.2,{height: '0'})}
-)
 
 
 //functions to delay type text in the header==============================
