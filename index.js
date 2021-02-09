@@ -17,9 +17,9 @@ const hiddenMenuAnimation =()=>{
 }
 
 const setMenu=(name1,name2,color,bgColor,heading)=>{
-    currentPageColor=color
-
-    tl.to('#location, #cursor,.hiddenName1, .hiddenName2',{color: color})
+    console.log(color)
+    tl.to('.contentDisplay',{boxShadow: `0 8px 32px 0 ${color}`})
+    .to('#location, #cursor,.hiddenName1, .hiddenName2',{color: color},'-=.3')
     .to('.dropScreen',{backgroundColor: bgColor })
     .to('svg',.5,{fill: color},'-=1')
     .add(()=> document.querySelector('.hiddenName1').innerHTML = name1)
@@ -102,21 +102,23 @@ const checkMenu=(e)=>{
 }
 
 const removeContent=(e)=>{
-
-    
+    // console.log("This is eeee:"+e)
     switch(e.innerHTML){
         case 'Resume':
-            tl.to('.aboutInfo',.5,{margin: '3vh auto',display: 'none',opacity: 0})
-            
+            tl.to('.aboutInfo, .projectInfo',.5,{margin: '3vh auto',display: 'none',opacity: 0})
             break;
+
         case 'About':
+            tl.to('.projectInfo, .resumeInfo',.5,{margin: '3vh auto',display: 'none',opacity: 0})
             break;
+    
         case 'Projects':
-            
+            tl.to('.aboutInfo, .resumeInfo',.5,{margin: '3vh auto',display: 'none',opacity: 0})
             break;
     }
 }
 const secondMenuSelect=(e)=>{
+    // console.log("This is eeee:"+e)
     tl
         .to('.string1',.3,{height: '55vh'})
         .to('.hiddenName1, .hiddenName2',.2,{top: '15vh'},'-=.2')
@@ -150,8 +152,7 @@ const projectsSide=()=>{
     screenRaise()
 }
 const resumeSide=()=>{
-    console.log('resSide')
-    setMenu('About','Projects','black','orange')
+    setMenu('About','Projects','#2f7dd0','#f1d5a3')
     changeHeaderText('Resume_Section')
     screenRaise()
 }
