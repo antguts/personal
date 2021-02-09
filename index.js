@@ -137,16 +137,13 @@ const screenRaise=()=>{
 
 }
 const aboutSide=()=>{
-    console.log('boutSide')
     setMenu('Resume','Projects','orange','grey')
     changeHeaderText('About_Section')
     screenRaise()
-    document.querySelector('.aboutInfo').style.display='inline-block'
-    tl.to('.aboutInfo',.5,{opacity: 1, marginTop: '8vh'})
+    tl.to('.aboutInfo',.5,{display:'block',opacity: 1, marginTop: '8vh'})
 
 }
 const projectsSide=()=>{
-    console.log('projSide')
     setMenu('Resume','About','#00d8fb','#7206b5')
     changeHeaderText('Projects_Section')
     screenRaise()
@@ -155,9 +152,10 @@ const resumeSide=()=>{
     setMenu('About','Projects','#2f7dd0','#f1d5a3')
     changeHeaderText('Resume_Section')
     screenRaise()
+    tl.to('.resumeInfo',.5,{display: 'block',opacity: 1, marginTop: '2vh'})
 }
 
-//border GSAP Animations==================================================
+//border GSAP Animations on home==================================================
 
 //About section==========================================================
 const aboutBorderHover =()=>{
@@ -204,6 +202,38 @@ const projectsBorderHoverOut =()=>{
     }
 } 
 
+
+
+//RESUME H1 content fill===============================================
+const resButtonClick=(e)=>{
+    
+    switch(e.innerHTML){
+        case 'EDUCATION':
+            document.querySelector('#resContent').innerHTML= 
+                '<h4>Palm Beach State College</h4>   \
+                <p>Studying computer science and working towards a BA in IT Forensics. Studied various languages to earn an AS in computer Programming.</p>     \
+                \
+                <h4>Ironhack Bootcamp</h4>   \
+                <p>Completed a 9-week intensive course in Javascript development, focusing on React and the MERN stack. I created multiple applications and participated in knowledge expanding sessions to gain insight on development in real world applications.</p>            \
+                '
+            break;
+        case 'EXPERIENCE':
+            document.querySelector('#resContent').innerHTML= 
+                '<h4>In the past</h4>'
+            break;
+        case 'ABOUT ME':
+            document.querySelector('#resContent').innerHTML= 
+                '<h4>Aspirations</h4>'
+            break;
+
+    }
+
+    tl.to('h4 p',{marginTop: '35px', opacity: 0})
+    .to('h4',{marginTop: '15px', opacity: 1, stagger: .3})
+    .to('p',{marginTop: '15px', opacity: 1, stagger: .3},'-=.5')
+
+
+}
 
 
 // jquery==============================================================
