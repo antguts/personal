@@ -245,7 +245,7 @@ const resButtonClick=(e)=>{
         case 'ABOUT ME':
             document.querySelector('#resContent').innerHTML= 
                 '<h4>Aspirations</h4>\
-                <p>Expanding my knowledge while</p>\
+                <p></p>\
                 '
             break;
 
