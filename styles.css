@@ -6,6 +6,11 @@ body{
     background-color: #444444;
     overflow: hidden;
 }
+a{
+    color: white;
+    text-decoration: none;
+}
+
 
 @media only screen and (max-width: 899px) {
 
@@ -69,7 +74,7 @@ body{
     .contactIcons{
         position: absolute;
         display: grid;
-        bottom: 30vh;
+        bottom: 25%;
         margin-left: 2vw;
         clear: both;
         right: 10vw;
@@ -93,7 +98,7 @@ body{
         height: auto;
         margin-bottom: 15px;
         fill: #24952f;
-        border-right: 1px solid transparent;
+        border-right: 4px solid transparent;
     }
 
     svg:hover{
@@ -101,7 +106,7 @@ body{
         /* margin-left: 15px; */
         transition-duration: .5s;
         opacity: 1;
-        border-right: 1px solid rgb(122, 120, 120);
+        border-right: 4px solid rgb(158, 151, 151);
     }
 
     /* Content display =================================================== */
@@ -160,7 +165,7 @@ body{
     }
 
     div .leftProjBorder,div .rightProjBorder{
-        background-color: rgb(114, 6, 181);
+        background-color: rgb(134, 23, 202);
         width: 10%;
         left: 50%;
         border-radius: 0 0 10px 10px;
@@ -171,7 +176,7 @@ body{
     }
 
     div .leftResBorder, div .rightResBorder{
-        background-color: rgb(241, 213, 163);
+        background-color: #c6d8dc;
         top: 45%;
         height: 15%;
         border-radius: 0 10px 10px 0;
@@ -295,6 +300,68 @@ body{
         margin-top: 4vh;
     }
 
+
+    /* PROJECT CONTENT======================================= */
+    .projectInfo{
+        /* position: absolute; */
+        opacity: 0;
+        display: none;
+        justify-content:space-evenly;
+        /* top: 15%; */
+        width: 65%;
+        height: 50vh;
+        margin-top: 10px;
+        /* border-bottom: 2px solid grey; */
+        /* box-shadow: 0px 0px 5px 0px #DBA632; */
+        /* z-index: 2000; */
+        /* background-color: green; */
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+    .projectInfo img{
+        width: 75%;
+        padding: 5px;
+        /* box-shadow: 2px 15px 15px 15px grey;  */
+        border-radius: 5px;
+        /* filter: blur(1px); */
+    }
+    .projectInfo h4{
+        /* position: absolute; */
+        /* text-align: center; */
+        font-size: 21px;
+        margin-left: 20px;
+        /* bottom: 0; */
+        /* background-color: white; */
+        /* color: blue; */
+    }
+    .projectInfo p{
+        padding: 0 15%;
+        font-size: 14px;
+    }
+    
+
+    .projectInfo a:hover{
+        border-bottom: 2px solid #00d8fb; 
+    }
+   
+    #karBlock, #devBlock {
+        display: flex;
+        justify-content: space-around;
+        /* margin-top: 10px; */
+        width: 95%;
+    }
+
+    #karBlock{
+        /* left: 7%; */
+    }
+    
+    #devBlock{
+        /* right: 10%; */
+
+        margin-top: 30px;
+        /* border-top: 1px solid thistle; */
+    }
+
     /* RESUME CONTENT============================== */
     .resumeInfo{
         /* position: absolute; */
@@ -376,23 +443,24 @@ body{
     /* width */
     ::-webkit-scrollbar {
         width: 8px;
+        /* color: grey; */
+        z-index: 35;
     }
     
     /* Track */
     ::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 5px grey; 
         border-radius: 10px;
     }
     
     /* Handle */
     ::-webkit-scrollbar-thumb {
-        background: rgb(167, 164, 164); 
-        border-radius: 7px;
+        background: rgb(47, 125, 208);  
+        border-radius: 8px;
     }
     
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
-        background: rgb(131, 126, 126); 
+        background: rgb(47, 125, 208); 
     }
 
 

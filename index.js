@@ -8,7 +8,9 @@ let resClicked = false
 // Other variables===========================
 let currentPageColor= 'green'
 
-
+window.onload = ()=>{
+    alert('ATTENTION: Under construction due to lost data. Mobile being developed seperate. Click "About" to enter animations. Thanks for the patience')
+}
 
 //Reusable===============================================
 
@@ -20,7 +22,7 @@ const setMenu=(name1,name2,color,bgColor,heading)=>{
     console.log(color)
     
     tl.to('.contentDisplay',{boxShadow: `0 8px 32px 0 ${color}`})
-    .to('#location, #cursor,.hiddenName1, .hiddenName2',{color: color},'-=.3')
+    .to('#location, #cursor,.hiddenName1, .hiddenName2, h4',{color: color},'-=.3')
     .to('.dropScreen',{backgroundColor: bgColor })
     .to('svg',.5,{fill: color},'-=1')
     .add(()=> document.querySelector('.hiddenName1').innerHTML = name1)
@@ -148,6 +150,11 @@ const projectsSide=()=>{
     setMenu('Resume','About','#00d8fb','#7206b5')
     changeHeaderText('Projects_Section')
     screenRaise()
+    console.log("poodypoo")
+    tl.to('.projectInfo',{display: 'inline-block', opacity: 1})
+
+    // tl.to('.aboutInfo, .projectInfo',.5,{margin: '3vh auto',display: 'none',opacity: 0})
+
 }
 const resumeSide=()=>{
     setMenu('About','Projects','#2f7dd0','rgb(198 216 220)')
@@ -210,8 +217,14 @@ $(".aboutSection").hover(aboutBorderHover,aboutBorderHoverOut)
 $(".projectSection").hover(projectsBorderHover,projectsBorderHoverOut)
 $(".resumeSection").hover(resumeBorderHover,resumeBorderHoverOut)
 
+$('.projectInfo a').hover(
+    ()=>{tl.to('#scrollWindow',.5,{width: '100%'})}
+    ,
+    ()=>{tl.to('#scrollWindow',.5,{width: '0'})}
+    )
 
 
+    
 $(".hiddenName1, .hiddenName2").hover(
     ()=>{tl.to('.string1',.2,{height: '40vh', ease:Power4.easeOut})}
     ,
