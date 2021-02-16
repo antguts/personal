@@ -43,7 +43,7 @@ const setMenu=(name1,name2,color,bgColor,heading)=>{
     
     tl.to('.contentDisplay',{boxShadow: `0 8px 32px 0 ${color}`})
     .to('.cogFill',.2,{ opacity: 0, fill: color},'-=.3')
-    .to('.cogs',.2,{left: '-14vw'},'-=1')
+    .to('.cogs',.2,{left: '-16vw'},'-=1')
     .to('#location, #cursor,.hiddenName1, .hiddenName2, h4',{color: color},'-=.8')
     .to('.dropScreen',{backgroundColor: bgColor })
     .to('svg',.5,{fill: color},'-=1')
