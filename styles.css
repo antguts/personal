@@ -10,6 +10,9 @@ a{
     color: white;
     text-decoration: none;
 }
+.favIcon{
+    width: 100%;
+}
 
 
 @media only screen and (max-width: 899px) {
@@ -87,9 +90,6 @@ a{
         border-radius: 4px;
     }
 
-    /* .contactIcons svg:hover{
-        box-shadow: -1px 1px 20px 15px #24952f;
-    } */
 
     svg{
         /* position: absolute; */
@@ -97,7 +97,7 @@ a{
         width: 4vw;
         height: auto;
         margin-bottom: 15px;
-        fill: #24952f;
+        fill: rgb(9, 185, 9);
         border-right: 4px solid transparent;
     }
 
@@ -166,7 +166,7 @@ a{
     
     div .leftProjBorder,div .rightProjBorder{
         position: fixed;
-        background-color: rgb(134, 23, 202);
+        background-color: #7205b5;
         height: 0;
         width: 5%;
         left: 50%;
@@ -274,6 +274,7 @@ a{
         content: ' ';
         /* background-color: red; */
         overflow: hidden;
+        /* height: 70%; */
         width: 100%;
     }
 
@@ -375,9 +376,10 @@ a{
         /* border-top: 1px solid thistle; */
     }
     .cogs{
-        position: absolute;
-        display: none;
-        bottom: -5%;
+        position: fixed;
+        opacity: 0;
+        bottom: 0;
+        left: -14vw;
         width: 20%;
         height: 50%;
     }
@@ -389,8 +391,9 @@ a{
         100% {transform: rotate(360deg);}
     } */
 
-    .cogs img{
-        width: 25%;
+    .cogs svg{
+        border: none;
+        opacity: 1;
     }
     #cog1, #cog2, #cog3, #cog4{
         position: absolute;
@@ -402,11 +405,11 @@ a{
     }
     #cog2{
         top: 42%;
-        left: 12%;
+        left: 17%;
     }
     #cog3{
         top: 19%;
-        left: 26%;
+        left: 23%;
     }
     #cog4{
         top: 26%;
