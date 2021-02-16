@@ -9,7 +9,7 @@ let resClicked = false
 let currentPageColor= 'green'
 
 window.onload = ()=>{
-    alert('ATTENTION: Under construction due to lost data. Mobile being developed seperate. Click "About" to enter animations. Thanks for the patience')
+    alert('ATTENTION: Under construction due to lost data. Mobile being developed seperate. Thanks for the patience')
 }
 
 //Reusable===============================================
@@ -72,13 +72,45 @@ const aboutClick=(e)=>{
     tl.to('.aboutInfo',.5,{opacity: 1, marginTop: '8vh'},'-=.3')
 }
 
+
+
+
+
 const projClick=()=>{
     projClicked = true
-    alert("projects");
+    tl.to('div .leftProjBorder,div .rightProjBorder',{height: '25%'})
+      .to(' h2',.5,{ opacity: 0},'-=2')
+      .to(' h2',{ display: 'none'})
+      .to('div .leftProjBorder,div .rightProjBorder',.5,{left: 0},'-=.6')
+      .to('div .leftProjBorder,div .rightProjBorder',.5,{width: '100%'})
+      .add(screenRaise()) 
+
+
+    //   .to('.dropScreen', .4,{height: '100%'})
+    
+
+    projectsSide()
+
+    // Move hidden menu to final position============================================
+    hiddenMenuAnimation()
+
+    // Change text on header changes with GSAP animation================================
+    // changeHeaderText("Project_Section")
+    // document.querySelector('.aboutInfo').style.display='inline-block'
+    // tl.to('.aboutInfo',.5,{opacity: 1, marginTop: '8vh'},'-=.3')
+
+
 }
 const resClick=()=>{
     resClicked = true
-    alert("resume");
+    // alert("resume");
+    tl.to('div .leftResBorder,div .rightResBorder',{width: '25%'})
+      .to(' h2',.5,{ opacity: 0},'-=2')
+      .to(' h2',{ display: 'none'})
+      .to('div .leftResBorder',.5,{width: '100vw'},'-=.5')
+      .to('div .leftResBorder,div .rightResBorder',.6,{top: '0', height: '100vh'})
+      .add(resumeSide(), '>-2')
+      hiddenMenuAnimation()
 }
 
 
@@ -140,27 +172,32 @@ const screenRaise=()=>{
 
 }
 const aboutSide=()=>{
-    setMenu('Resume','Projects','orange','grey')
-    changeHeaderText('About_Section')
-    screenRaise()
-    tl.to('.aboutInfo',.5,{display:'block',opacity: 1, marginTop: '8vh'})
+    
+    tl.add(setMenu('Resume','Projects','orange','grey'))
+      .add(changeHeaderText('About_Section'))
+      .to('.cogs',{display: 'none'})
+      .add(screenRaise())
+      .to('.aboutInfo',.5,{display:'block',opacity: 1, marginTop: '8vh'})
 
 }
 const projectsSide=()=>{
-    setMenu('Resume','About','#00d8fb','#7206b5')
-    changeHeaderText('Projects_Section')
-    screenRaise()
-    console.log("poodypoo")
-    tl.to('.projectInfo',{display: 'inline-block', opacity: 1})
+    
+    tl.add(setMenu('Resume','About','#00d8fb','#7206b5'))
+      .add(changeHeaderText('Projects_Section'))
+      .add(screenRaise())
+      .to('.cogs',{display: 'block'})
+      .to('.projectInfo',{display: 'inline-block', opacity: 1})
 
     // tl.to('.aboutInfo, .projectInfo',.5,{margin: '3vh auto',display: 'none',opacity: 0})
 
 }
 const resumeSide=()=>{
-    setMenu('About','Projects','#2f7dd0','rgb(198 216 220)')
-    changeHeaderText('Resume_Section')
-    screenRaise()
-    tl.to('.resumeInfo',.5,{display: 'block',opacity: 1, marginTop: '2vh'})
+    
+    tl.add(setMenu('About','Projects','#2f7dd0','rgb(198 216 220)'))
+      .add(changeHeaderText('Resume_Section'))
+      .add(screenRaise())
+      .to('.cogs',{display: 'block'})
+      .to('.resumeInfo',.5,{display: 'block',opacity: 1, marginTop: '2vh'})
 }
 
 //border GSAP Animations on home==================================================
@@ -231,6 +268,24 @@ $(".hiddenName1, .hiddenName2").hover(
     ()=>{tl.to('.string1',.2,{height: '0'})}
 )
 
+// $('#karBlock').hover(
+//     ()=>{
+//         tl.to('#karBlock p',{display: 'block', opacity: 1})
+//           .to('#karBlock img', {width: '100%'},'-=.5')
+//         }
+//     ,
+//     ()=>{
+//         tl.to('#karBlock p',.5,{ opacity: 0})
+//           .to('#karBlock p',{display: 'none', opacity: 0})
+//           .to('#karBlock img', {width: '25%'},'-=.5')
+//     }
+// )
+// $('#devBlock').hover(
+//     ()=>{tl.to('#devBlock p',{display: 'block', opacity: 1})}
+//     ,
+//     ()=>{tl.to('#devBlock p',{display: 'none', opacity: 0})}
+// )
+
 
 
 //RESUME H1 content fill===============================================
@@ -265,8 +320,8 @@ const resButtonClick=(e)=>{
     }
 
     tl.to('h4 p',{marginTop: '35px', opacity: 0})
-    .to('h4',{marginTop: '15px', opacity: 1, stagger: .3})
-    .to('p',{marginTop: '15px', opacity: 1, stagger: .3},'-=.5')
+    .to('h4',{marginTop: '15px', opacity: 1, stagger: .3},'-=.4')
+    .to('p',{marginTop: '15px', opacity: 1, stagger: .2},'-=.7')
 
 
 }

@@ -119,6 +119,7 @@ a{
         left: 4.5vw;
         width: 75vw;
         height: 68vh;
+        overflow: hidden;
 
         box-shadow: 0 8px 32px 0 #858383;
         backdrop-filter: blur( 4px );
@@ -149,24 +150,25 @@ a{
     /* Divs for "border" animation */
 
     div .leftAboutBorder, div .rightAboutBorder,
-    div .leftResBorder, div .rightResBorder,
-    div .leftProjBorder, div .rightProjBorder{
+    div .leftResBorder, div .rightResBorder{
         position: absolute;
         background-color: #5f5c5c;
         height: 0;
         width: 0;
         border-radius: 0 0 10px 0;
     }
-
+    
     div .rightAboutBorder{
         right: 0;
         bottom: 0;
         border-radius: 10px 0 0 0;
     }
-
+    
     div .leftProjBorder,div .rightProjBorder{
+        position: fixed;
         background-color: rgb(134, 23, 202);
-        width: 10%;
+        height: 0;
+        width: 5%;
         left: 50%;
         border-radius: 0 0 10px 10px;
     }
@@ -304,12 +306,13 @@ a{
     /* PROJECT CONTENT======================================= */
     .projectInfo{
         /* position: absolute; */
+        margin-left: 15%;
         opacity: 0;
         display: none;
         justify-content:space-evenly;
         /* top: 15%; */
-        width: 65%;
-        height: 50vh;
+        width: 55%;
+        height: 43vh;
         margin-top: 10px;
         /* border-bottom: 2px solid grey; */
         /* box-shadow: 0px 0px 5px 0px #DBA632; */
@@ -319,7 +322,8 @@ a{
         overflow-x: hidden;
     }
     .projectInfo img{
-        width: 75%;
+        width: 100%;
+        height: auto;
         padding: 5px;
         /* box-shadow: 2px 15px 15px 15px grey;  */
         border-radius: 5px;
@@ -335,9 +339,17 @@ a{
         /* color: blue; */
     }
     .projectInfo p{
-        padding: 0 15%;
-        font-size: 14px;
+        /* opacity: 0;
+        display: none; */
+        /* padding-bottom: 25px; */
+        /* border-bottom: 3px solid rgb(27, 202, 27); */
+        color: rgb(27, 202, 27);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding: 0 10%;
+        font-size: 1vw;
+        
     }
+    
     
 
     .projectInfo a:hover{
@@ -351,16 +363,80 @@ a{
         width: 95%;
     }
 
-    #karBlock{
-        /* left: 7%; */
+    #karBlock, #devBlock{
+        /* border-bottom: 1px solid grey; */
     }
     
     #devBlock{
         /* right: 10%; */
-
-        margin-top: 30px;
+        
+        /* float: right; */
+        margin-top: 20px;
         /* border-top: 1px solid thistle; */
     }
+    .cogs{
+        position: absolute;
+        display: none;
+        bottom: -5%;
+        width: 20%;
+        height: 50%;
+    }
+    
+/* 
+    @-webkit-keyframes cog-rotate {
+        0% {transform: rotate(360deg);}
+        50% {transform: rotate(360deg);}
+        100% {transform: rotate(360deg);}
+    } */
+
+    .cogs img{
+        width: 25%;
+    }
+    #cog1, #cog2, #cog3, #cog4{
+        position: absolute;
+    }
+    #cog1{
+        left: 0;
+       margin-top: 5px; 
+       width: 30%;
+    }
+    #cog2{
+        top: 42%;
+        left: 12%;
+    }
+    #cog3{
+        top: 19%;
+        left: 26%;
+    }
+    #cog4{
+        top: 26%;
+        width: 41%;
+        left: 46%;
+    }
+    .rotate {
+        -webkit-animation: rotating 7s linear infinite;
+    }
+    .rotate2 {
+        -webkit-animation: rotating2 7s linear infinite;
+    }
+    
+    @-webkit-keyframes rotating {
+        from{
+            -webkit-transform: rotate(0deg);
+        }
+        to{
+            -webkit-transform: rotate(360deg);
+        }
+    }
+    @-webkit-keyframes rotating2 {
+        from{
+            -webkit-transform: rotate(360deg);
+        }
+        to{
+            -webkit-transform: rotate(0deg);
+        }
+    }
+
 
     /* RESUME CONTENT============================== */
     .resumeInfo{
@@ -479,7 +555,7 @@ a{
 
     .dropScreen{
         position: absolute;
-        background-color: brown;
+        /* background-color: brown; */
         width: 100%;
         /* height: 2vh;  */
         bottom: 0;
@@ -506,19 +582,5 @@ a{
         50%  {opacity: 1;}
         100% { opacity: 0; }
     }
-    @-moz-keyframes cursor-blink {
-        0%   { opacity: 0; }
-        50%  {opacity: 1;}
-        100% { opacity: 0; }
-    }
-    @-o-keyframes cursor-blink {
-        0%   { opacity: 0; }
-        50%  {opacity: 1;}
-        100% { opacity: 0; }
-    }
-    @keyframes cursor-blink {
-        0%   { opacity: 0; }
-        50%  {opacity: 1;}
-        100% { opacity: 0; }
-    }
+    
 } /*End media query for desktop*/
