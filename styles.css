@@ -20,13 +20,18 @@ a{
         display: none;
     }
     #mobileMenu{
+        text-align: center;
         margin: auto;
+        margin-top: 5vh;
         width: 90%;
-        height: 86vh;
+        height: 79vh;
         overflow: scroll;
+        overflow-x: hidden;
+        z-index: 33;
     }
     #mobileMenu h3{
-        font-size: 42px;    
+        color: rgb(23, 228, 47);
+        font-size: 62px;    
     }
     .splitLeft, .splitRight{
         /* position: absolute; */
@@ -91,6 +96,31 @@ a{
     #resMega{
         display: none;
     }
+    #mobCloseButton{
+        position: absolute;
+        display: none;
+        opacity: 0;
+        font-size: 20vw;
+        left: 42vw;
+        top: 11vh;
+    }
+    
+    .aboutInfo{
+        
+        position: absolute;
+        top: 23vh;
+        left: 15%;
+        width: 70vw;
+        margin: 0 auto;
+        text-align: center;
+        color: white;
+        opacity: 0;   
+    }
+
+    .aboutInfo p{
+        font-size: 22px;
+    }
+
 
     
 

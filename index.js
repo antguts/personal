@@ -10,13 +10,19 @@ const tl=new TimelineMax
 
 
 //MOBILE ANIMATIONS================================
+const splitChoice=()=>{
+    tl.to('.splitLeft',.3,{opacity: 0})
+      .to('.splitRight',.3,{marginLeft: '90vw'},'-=.3')
+      .to('#mobCloseButton',.6,{opacity: 1, display: 'block', delay: 2})
+}
+
 const mobAbout=()=>{
-    console.log('testerino')
-    tl.to('.splitLeft',.5,{opacity: 0})
-      .to('.splitRight',.5,{marginLeft: '90vw'},'-=.3')
-      .to('#aboutMob',.5,{boxShadow: '0 8px 32px 0 rgb(210, 119, 8)', height: '68vh'})
+    gsap.to('#mobileMenu',.5,{marginTop: '5vh'},'-=.5')
+        splitChoice()
+    tl.to('#mobileMenu',.5,{boxShadow: '10px 8px 32px 0 rgb(210, 119, 8)', height: '75vh'},'-=1')
       .to('.contantIcons svg, #location, #cursor',.5,{color: 'rgb(210, 119, 8)'})
       .to('svg',.5,{fill: 'rgb(210, 119, 8)'},'-=.4')
+      .to('.aboutInfo',.5,{opacity: 1, display: 'block'})
       .add(changeHeaderText('About_Section'))
     //   .to()
 
