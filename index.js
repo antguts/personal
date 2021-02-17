@@ -2,7 +2,9 @@
 window.onload = ()=>{
     alert('Site is a little messy right now.... Thanks for the patience')
 }
-// VARIABLE TO CREATE GSAP TIMELINES=======================
+
+
+// VARIABLE TO CREATE GSAP TIMELINE=======================
 const tl=new TimelineMax
 
 
