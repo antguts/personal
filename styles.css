@@ -12,28 +12,102 @@ a{
 }
 
 
+/* MOBILE CSS================================== */
+
 @media only screen and (max-width: 899px) {
 
+    .desktop {
+        display: none;
+    }
+    #mobileMenu{
+        margin: auto;
+        width: 90%;
+        height: 86vh;
+        overflow: scroll;
+    }
+    #mobileMenu h3{
+        font-size: 42px;    
+    }
+    .splitLeft, .splitRight{
+        /* position: absolute; */
+    }
+
     .contactIcons{
-        position: sticky;
+        position: fixed;
         display: flex;
         justify-content: space-around;
         width: 100%;
         bottom: 0;
     }
-    
-    svg{
-        width: 10vw;
-        height: auto;
-        fill:rgb(0, 219, 73);
+    .terminal{
+        font-size: 9px;
+        color: rgb(13, 201, 13);
     }
 
+    svg{
+        width: 17vw;
+        height: auto;
+        fill:rgb(23, 228, 47);
+    }
+    .mainContent{
+        overflow: hidden;
+    }    
+    .aboutInfo, .projectInfo, .resumeInfo{
+        display: none;
+    }
+    .cogs{
+        position: absolute;
+        display: none;
+        bottom: 18vh;
+        /* right: 0; */
+        opacity: .2;
+        z-index: -5;
+    }
+    #cog1,#cog2,#cog3,#cog4,#cog5{
+        position: absolute;
+        left: 0;
+    }
+    #cog1{
+        left: 18vw;
+        width: 15vw;
+    }
+    #cog2{
+        top: -16vh;
+        width: 37vw;
+        left: 50vw;
+    }
+    #cog3{
+        left: 30vw;
+        width: 22vw;
+        top: 2vh;
+    }
+    #cog4{
+        width: 12vw;
+        left: 48vw;
+    }
+    #cog5{
+        left: 58vw;
+        width: 26vw;
+    }
+    #resMega{
+        display: none;
+    }
 
+    
+
+
+
+
+    
 } /* End of small screen media query  */
 
 
 
+/* DESKTOP CSS ====================================== */
 @media only screen and (min-width: 900px) {
+    .mobile{
+        display: none;
+    }
     .container{
         font-family: 'Oswald';
         color: white;
@@ -94,6 +168,7 @@ a{
         margin-bottom: 15px;
         fill: rgb(9, 185, 9);
         border-right: 4px solid transparent;
+        
     }
 
     svg:hover{
@@ -204,9 +279,9 @@ a{
         bottom: 8px;
         display: flex;
         overflow: hidden;
-
+        
     }
-
+    
     .hiddenMenu h1{
         z-index: 5;
         color: rgb(0, 219, 73);
@@ -217,22 +292,23 @@ a{
         width: 50%;
     }
 
+    
+    .hiddenName1{
+        z-index: 4;
+    }
+    
+    
+    span:hover{
+        /* pointer-events: none; */
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    
     .hiddenName1, .hiddenName2{
-
         position: absolute;
         top: 15vh;
         margin-bottom: 20px;
     }
-
-    .hiddenName1{
-        z-index: 4;
-    }
-
-    span:hover{
-        cursor: pointer;
-        text-decoration: underline;
-    }
-
 
 
     .strings{
@@ -332,7 +408,7 @@ a{
     }
     .cogs{
         position: fixed;
-        opacity: 0;
+        opacity: 1;
         bottom: 0;
         left: -16vw;
         width: 20%;
@@ -372,31 +448,6 @@ a{
         left: -2%;
         width: 80%;
     }
-
-    .rotate {
-        -webkit-animation: rotating 7s linear infinite;
-    }
-    .rotate2 {
-        -webkit-animation: rotating2 7s linear infinite;
-    }
-    
-    @-webkit-keyframes rotating {
-        from{
-            -webkit-transform: rotate(0deg);
-        }
-        to{
-            -webkit-transform: rotate(360deg);
-        }
-    }
-    @-webkit-keyframes rotating2 {
-        from{
-            -webkit-transform: rotate(360deg);
-        }
-        to{
-            -webkit-transform: rotate(0deg);
-        }
-    }
-
 
     /* RESUME CONTENT============================== */
     .resumeInfo{
@@ -519,20 +570,48 @@ a{
 
 
 
-    /* Blinking cursor in terminal=========================================== */
-
-    #cursor {
-        -webkit-animation: cursor-blink 1s infinite; /* Safari 4+ */
-        -moz-animation:    cursor-blink 1s infinite; /* Fx 5+ */
-        -o-animation:      cursor-blink 1s infinite; /* Opera 12+ */
-        animation:         cursor-blink 1s infinite; /* IE 10+, Fx 29+ */    
-    }
-
-
-    @-webkit-keyframes cursor-blink {
-        0%   { opacity: 0; }
-        50%  {opacity: 1;}
-        100% { opacity: 0; }
-    }
     
 } /*End media query for desktop*/
+
+
+
+/* SHARED ======================================== */
+
+/* Blinking cursor in terminal=========================================== */
+#cursor {
+    -webkit-animation: cursor-blink 1s infinite; /* Safari 4+ */
+    -moz-animation:    cursor-blink 1s infinite; /* Fx 5+ */
+    -o-animation:      cursor-blink 1s infinite; /* Opera 12+ */
+    animation:         cursor-blink 1s infinite; /* IE 10+, Fx 29+ */    
+}
+
+
+@-webkit-keyframes cursor-blink {
+    0%   { opacity: 0; }
+    50%  {opacity: 1;}
+    100% { opacity: 0; }
+}
+
+.rotate {
+    -webkit-animation: rotating 7s linear infinite;
+}
+.rotate2 {
+    -webkit-animation: rotating2 7s linear infinite;
+}
+
+@-webkit-keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes rotating2 {
+    from{
+        -webkit-transform: rotate(360deg);
+    }
+    to{
+        -webkit-transform: rotate(0deg);
+    }
+}

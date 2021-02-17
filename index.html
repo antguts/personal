@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link class="favIcon" rel='shortcut icon' type='image/x-icon' href='/personal/assets/megaman.png' />
+    <link class="favIcon" rel='shortcut icon' type='image/x-icon' href='/../assets/megaman.png' />
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>AG</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <!-- CHANGE href TO 'PERSONAL' WHEN PUSHING======= -->
-    <link rel='stylesheet' type='text/css' media='screen' href='/personal/styles.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/../styles.css'>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
     <!-- CHANGE href TO 'PERSONAL' WHEN PUSHING======= -->
-    <script src='/personal/index.js' defer></script>
+    <script src='/../index.js' defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
 
@@ -25,25 +25,41 @@
             <h1>@Anthony_Gutilla~$:<span id="location"></span><span id='cursor'>&lhblk;</span></h1>    
         </div>
 
+        <div id="mobileMenu" class="mobile">
+            <div id="aboutMob" onClick="mobAbout()">
+                <h3><span class="splitLeft">Ab</span><span class="splitRight">out</span></h3>
+            </div>
+            <div id="projectMob">
+                <h3><span class="splitLeft">Proj</span><span class="splitRight">ects</span></h3>
+            </div>
+            <div id="bioMob">
+                <h3><span class="splitLeft">Bi</span><span class="splitRight">o</span></h3>
+            </div>
+        </div>
+
+
+
+
+
         
         <div class="contentDisplay">
-            <div class="strings">
+            <div class="strings desktop">
                 <span class="string1"></span>
             </div>
             
-            <div class="aboutSection">
+            <div class="aboutSection desktop">
                 <div class="leftAboutBorder"><h2></h2></div>
                 <h2 onClick="aboutClick(this)">About</h2>
                 <div class="rightAboutBorder"><h2></h2></div>
             </div>
             
-            <div class="projectSection">
+            <div class="projectSection desktop">
                 <div class="leftProjBorder"><h2></h2></div>
                 <h2 onClick="projClick(this)">Projects</h2>
                 <div class="rightProjBorder"><h2></h2></div>
             </div>
             
-            <div class="resumeSection">
+            <div class="resumeSection desktop">
                 <div class="leftResBorder"><h2></h2></div>
                 <h2 onClick="resClick(this)">Resume</h2>
                 <div class="rightResBorder"><h2></h2></div>
@@ -51,14 +67,14 @@
             
             
             <!-- Menu that comes after initial menu selection======================== -->
-            <div class="hiddenMenu">
+            <div class="hiddenMenu" desktop>
                 <h1><span class="hiddenName1" onClick="secondMenuSelect(this)"></span></h1>
                 <h1><span class="hiddenName2" onClick="secondMenuSelect(this)"></span></h1>
             </div>
             
 
             <!-- Dropscreen============================== -->
-            <div class="dropScreen"><span></span></div>
+            <div class="dropScreen desktop"><span></span></div>
 
             <div class="mainContent">
                 
@@ -113,12 +129,11 @@
 
                 <div class="projectInfo">
                    
-
                     <div id="karBlock">
                         <div>
                             <a href="https://antguts.github.io/profile/Karen/index.html" target="blank">
     <!-- CHANGE href TO 'PERSONAL' WHEN PUSHING======= -->
-                                <img src="/personal/assets/zomKarSS.png"/>
+                                <img src="/../assets/zomKarSS.png"/>
                                 <h4>Zombie Karens</h4>
                             </a>
                         </div>
@@ -130,7 +145,7 @@
                         <div>
                             <a href="https://dev-link.netlify.app/" target="blank">
     <!-- CHANGE href TO 'PERSONAL' WHEN PUSHING======= -->
-                                <img src="/personal/assets/devlinkLogo.png"/>
+                                <img src="/../assets/devlinkLogo.png"/>
                                 <h4>Dev Link</h4>
                             </a>
                         </div>
@@ -150,7 +165,7 @@
                         <h3 onClick='resButtonClick(this)'>EXPERIENCE</h3>
                         <h3 onClick='resButtonClick(this)'>ABOUT ME</h3>
                     </div>
-                    <img id="resMega" src="/personal/assets/megaman.png" />
+                    <img id="resMega" src="/../assets/megaman.png" />
                     <div id="resContent"></div>
                 </div>
 
@@ -170,7 +185,7 @@
             <a href="mailto:antgut035@gmail.com" id="contactIcon">
                 <svg class="emailSVG" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
             </a>
-        </div>
+         </div><!-- Did WAY more work than I had to ):< -->
 
         
 

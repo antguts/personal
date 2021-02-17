@@ -1,16 +1,41 @@
+// Other variables===========================
+window.onload = ()=>{
+    alert('Site is a little messy right now.... Thanks for the patience')
+}
+// VARIABLE TO CREATE GSAP TIMELINES=======================
 const tl=new TimelineMax
 
-// Variables to see if checked================
-// let abClicked = false
-// let projClicked = false
-// let resClicked = false
 
-// Other variables===========================
-let currentPageColor= 'green'
 
-window.onload = ()=>{
-    alert('ATTENTION: Under construction due to lost data. Mobile being developed seperate. Thanks for the patience')
+//MOBILE ANIMATIONS================================
+const mobAbout=()=>{
+    console.log('testerino')
+    tl.to('.splitLeft',.5,{opacity: 0})
+      .to('.splitRight',.5,{marginLeft: '90vw'},'-=.3')
+      .to('#aboutMob',.5,{boxShadow: '0 8px 32px 0 rgb(210, 119, 8)', height: '68vh'})
+      .to('.contantIcons svg, #location, #cursor',.5,{color: 'orange'})
+      .to('svg',.5,{fill: 'orange'},'-=.4')
+      .add(changeHeaderText('About_Section'))
+    //   .to()
+
+
 }
+const mobProj=()=>{
+
+}
+const mobBio=()=>{
+
+}
+
+
+
+
+
+
+
+
+
+
 
 //Reusable===============================================
 
@@ -64,12 +89,12 @@ const aboutClick=(e)=>{
         .to('.rightAboutBorder', .4,{height: '0', width: '5%', marginRight: 0},'-=.3')
         
     // Move hidden menu to final position============================================
-    hiddenMenuAnimation()
-
+    
     // Change text on header changes with GSAP animation================================
     changeHeaderText("About_Section")
     document.querySelector('.aboutInfo').style.display='inline-block'
     tl.to('.aboutInfo',.5,{opacity: 1, marginTop: '8vh'},'-=.3')
+    hiddenMenuAnimation()
 }
 
 
@@ -170,7 +195,7 @@ const secondMenuSelect=(e)=>{
 const screenRaise=()=>{
     tl.to('.dropScreen',.3,{height: '100%'})
       .to('.hiddenName1, .hiddenName2',.2,{top: '5vh'})
-      .to('.cogs, .cogFill',.4,{left: 0, opacity:1, delay: 1})
+      .to('.cogs, .cogFill',.4,{left: 0, delay: 1})
 
 }
 const aboutSide=()=>{
