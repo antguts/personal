@@ -15,8 +15,8 @@ const mobAbout=()=>{
     tl.to('.splitLeft',.5,{opacity: 0})
       .to('.splitRight',.5,{marginLeft: '90vw'},'-=.3')
       .to('#aboutMob',.5,{boxShadow: '0 8px 32px 0 rgb(210, 119, 8)', height: '68vh'})
-      .to('.contantIcons svg, #location, #cursor',.5,{color: 'orange'})
-      .to('svg',.5,{fill: 'orange'},'-=.4')
+      .to('.contantIcons svg, #location, #cursor',.5,{color: 'rgb(210, 119, 8)'})
+      .to('svg',.5,{fill: 'rgb(210, 119, 8)'},'-=.4')
       .add(changeHeaderText('About_Section'))
     //   .to()
 
@@ -28,15 +28,6 @@ const mobProj=()=>{
 const mobBio=()=>{
 
 }
-
-
-
-
-
-
-
-
-
 
 
 //Reusable===============================================

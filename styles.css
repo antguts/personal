@@ -59,7 +59,6 @@ a{
         position: absolute;
         display: none;
         bottom: 18vh;
-        /* right: 0; */
         opacity: .2;
         z-index: -5;
     }
