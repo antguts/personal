@@ -1,3 +1,9 @@
+/* ZOMBIE FONT================== */
+@font-face {
+    font-family: corpse;
+    src: url("/assets/exquisiteCorpse.ttf") format("opentype");
+}
+
 body{
     font-family: 'fantasy';
     background-color: #444444;
@@ -130,7 +136,15 @@ a{
     
 } /* End of small screen media query  */
 
-
+#karBlock h4{
+    margin: 27px auto;
+    font-size: 45px;
+    font-family: corpse;
+}
+#devBlock img{
+    width: 12vw;
+    margin-top: 35px;
+}
 
 /* DESKTOP CSS ====================================== */
 @media only screen and (min-width: 900px) {
@@ -397,7 +411,7 @@ a{
         display: none;
         justify-content:space-evenly;
         width: 55%;
-        height: 43vh;
+        height: 53vh;
         margin-top: 10px;
         overflow: scroll;
         overflow-x: hidden;
@@ -421,9 +435,11 @@ a{
     }
     
     
-
-    .projectInfo a:hover{
+    .projLink:hover{
         border-bottom: 2px solid #00d8fb; 
+    }
+    .projectInfo h4:hover{
+        /* background-color: green; */
     }
    
     #karBlock, #devBlock {

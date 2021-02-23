@@ -1,6 +1,6 @@
 // Other variables===========================
 window.onload = ()=>{
-    alert('Site is a little messy right now.... Thanks for the patience')
+    alert('Site is a little messy right now, mobile in development.... Thanks for the patience')
 }
 
 
