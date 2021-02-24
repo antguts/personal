@@ -13,15 +13,16 @@ const tl=new TimelineMax
 const splitChoice=()=>{
     tl.to('.splitLeft',.3,{opacity: 0})
       .to('.splitRight',.3,{marginLeft: '90vw'},'-=.3')
-      .to('#mobCloseButton',.6,{opacity: 1, display: 'block', delay: 2})
+    //   .to('#mobCloseButton',.6,{opacity: 1, display: 'block', delay: 2})
 }
 
 const mobAbout=()=>{
     gsap.to('#mobileMenu',.5,{marginTop: '5vh'},'-=.5')
         splitChoice()
-    tl.to('#mobileMenu',.5,{boxShadow: '10px 8px 32px 0 rgb(210, 119, 8)', height: '75vh'},'-=1')
-      .to('.contantIcons svg, #location, #cursor',.5,{color: 'rgb(210, 119, 8)'})
-      .to('svg',.5,{fill: 'rgb(210, 119, 8)'},'-=.4')
+    tl.to('#mobileMenu',.5,{height: '75vh'},'-=1')
+    .add(setMenu('Resume','Projects','rgb(210, 119, 8)','grey'))
+    //   .to('.contantIcons svg, #location, #cursor',.5,{color: 'rgb(210, 119, 8)'})
+    //   .to('svg',.5,{fill: 'rgb(210, 119, 8)'},'-=.4')
       .to('.aboutInfo',.5,{opacity: 1, display: 'block'})
       .add(changeHeaderText('About_Section'))
     //   .to()
@@ -39,18 +40,22 @@ const mobBio=()=>{
 //Reusable===============================================
 
 const hiddenMenuAnimation =()=>{
-    tl.to('.hiddenName1, .hiddenName2',1,{top:'5vh', ease:Power4.easeOut})
+    // tl.to('.hiddenMenu',.5,{opacity: 0})
+      tl.to('.hiddenName1, .hiddenName2',1,{top:'5vh', ease:Power4.easeOut})
+    //   .to('.hiddenMenu',.5,{opacity: 1}) 
 }
 
 const setMenu=(name1,name2,color,bgColor,heading)=>{
     
-    tl.to('.contentDisplay',{boxShadow: `0 8px 32px 0 ${color}`})
+    tl.to('.contentDisplay, #mobileMenu',{boxShadow: `0 8px 32px 0 ${color}`})
     .to('.cogFill',.2,{ fill: color},'-=.3')
-    .to('#location, #cursor,.hiddenName1, .hiddenName2, h4',{color: color},'-=.8')
     .to('.dropScreen',{backgroundColor: bgColor })
     .to('svg',.5,{fill: color},'-=1')
+    .to('.hiddenMenu',.5,{opacity: 0},'-=1')
     .add(()=> document.querySelector('.hiddenName1').innerHTML = name1)
     .add(()=> document.querySelector('.hiddenName2').innerHTML = name2)
+    .to('#location, #cursor,.hiddenName1, .hiddenName2, h4',{color: color},'-=.8')
+    .to('.hiddenMenu',.5,{opacity: 1})
     .add(()=> {
         document.querySelector('.string1').style.backgroundColor = color
 
@@ -120,9 +125,7 @@ const projClick=()=>{
     hiddenMenuAnimation()
 
     // Change text on header changes with GSAP animation================================
-    // changeHeaderText("Project_Section")
-    // document.querySelector('.aboutInfo').style.display='inline-block'
-    // tl.to('.aboutInfo',.5,{opacity: 1, marginTop: '8vh'},'-=.3')
+
 
 
 }

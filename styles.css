@@ -114,7 +114,7 @@ a{
     .aboutInfo{
         
         position: absolute;
-        top: 23vh;
+        top: 10vh;
         left: 15%;
         width: 70vw;
         margin: 0 auto;
@@ -122,16 +122,86 @@ a{
         color: white;
         opacity: 0;   
     }
-
+    .aboutInfo h1{
+        font-size: 3.5vh;
+    }
     .aboutInfo p{
-        font-size: 22px;
+        font-size: 2.7vh;
+    }
+    
+    .resumeInfo {
+        width: 78vw;
+        margin: 1vh auto 3vh;
+        opacity: 1;
+        position: absolute;
+        top: 8vh;
+        left: 11vw;
     }
 
+    .resumeInfo h4, .resumeInfo p{
+        opacity: 0;
+        margin-top: 35px;
+        margin-left: 3vw;
+    }
 
+    .resumeInfo p{
+        font-size: 2.3vh;
+        margin-left: 35px;
+        color: rgb(156, 149, 149);
+    }
+
+    .resumeInfo h4{
+        margin-bottom: 5px;
+        width: 100%;
+        color: rgb(47 125 208);
+        border-bottom: .5px solid rgb(47 125 208);
+        font-size: 2.7vh;
+    }
+    #resContent{
+        margin-top: 4vh;
+    }
+
+    #resButtons h3{
+        color: rgb(47 125 208);
+        margin-bottom: 5px;
+        margin-top: 5px;
+        border-left: 1px solid rgb(47 125 208);
+        padding: 0 10px;
+        width: 45%;
+    }
+    .projLink{
+        /* width: 90%; */
+        margin: 10vh 0 8vh;
+    }
+    .projectInfo{
+        position: absolute;
+        width: 81%;
+        left: 10vw;
+        top: 7vh;
+    }
     
+    .projectInfo p{
+        display: none;
+    }
 
+    #devBlock img {
+        width: 90%;
+    }
 
-
+    .hiddenMenu{
+        position: absolute;
+        top: 74vh;
+        display: flex;
+        margin: auto;
+        right: 9vw;
+    }
+    .hiddenMenu h1{
+        position: relative;
+        padding: 0 5vw;
+    }
+    
+    
+    
 
     
 } /* End of small screen media query  */
@@ -141,10 +211,7 @@ a{
     font-size: 45px;
     font-family: corpse;
 }
-#devBlock img{
-    width: 12vw;
-    margin-top: 35px;
-}
+
 
 /* DESKTOP CSS ====================================== */
 @media only screen and (min-width: 900px) {
@@ -434,13 +501,14 @@ a{
         
     }
     
+    .projLink{
+        border-bottom: 2px solid transparent; 
+    }
     
     .projLink:hover{
         border-bottom: 2px solid #00d8fb; 
     }
-    .projectInfo h4:hover{
-        /* background-color: green; */
-    }
+
    
     #karBlock, #devBlock {
         display: flex;
@@ -450,6 +518,10 @@ a{
     
     #devBlock{
         margin-top: 20px;
+    }
+    #devBlock img{
+        width: 12vw;
+        margin-top: 35px;
     }
     .cogs{
         position: fixed;
