@@ -211,7 +211,7 @@ a{
 /* EXTRA SMALL MOBILE===================================== */
 @media only screen and (max-width: 321px){
     .terminal{
-        font-size: 7px;
+        font-size: 2.5vw;
     }
 
     .hiddenMenu{
@@ -230,6 +230,13 @@ a{
     .projLink{
         text-align: center;
     }
+
+    .contactIcons{
+        position: revert;
+        margin-top: 15px;
+    }
+
+
 
 }/*End extra small mobile*/
 
