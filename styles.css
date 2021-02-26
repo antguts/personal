@@ -214,9 +214,23 @@ a{
         font-size: 7px;
     }
 
+    .hiddenMenu{
+        margin: 15px 10px 0 0;
+    }
+
     .hiddenMenu h1{
         font-size: 24px;
     }
+    
+    #resButtons h3{
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .projLink{
+        text-align: center;
+    }
+
 }/*End extra small mobile*/
 
 

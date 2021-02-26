@@ -16,25 +16,37 @@ const splitChoice=()=>{
     //   .to('#mobCloseButton',.6,{opacity: 1, display: 'block', delay: 2})
 }
 
-const mobAbout=()=>{
-    gsap.to('#mobileMenu',.5,{marginTop: '5vh'},'-=.5')
-        splitChoice()
-    tl.to('#mobileMenu',.5,{height: '75vh'},'-=1')
-    .add(setMenu('Resume','Projects','rgb(210, 119, 8)','grey'))
-    //   .to('.contantIcons svg, #location, #cursor',.5,{color: 'rgb(210, 119, 8)'})
-    //   .to('svg',.5,{fill: 'rgb(210, 119, 8)'},'-=.4')
-      .to('.aboutInfo',.5,{opacity: 1, display: 'block'})
-      .add(changeHeaderText('About_Section'))
-    //   .to()
+const mobSelect=(e)=>{
+    let temp = e.id
+    
+    tl.to('#mobileMenu',{marginTop: '5vh'})
+      .add(splitChoice())
+      .to('#mobileMenu',.5,{height: '75vh'},'-=1')
+    .add(()=>{
+        switch(temp){
+            case 'aboutMob':
+                aboutSide()
+            break;
+            case 'projectMob':
+                projectsSide()
+            break;
+            case 'bioMob':
+                resumeSide()
+            break;
+        }
+    },'-=2')
+      
 
 
+    
 }
-const mobProj=()=>{
 
-}
-const mobBio=()=>{
+// const mobProj=()=>{
 
-}
+// }
+// const mobBio=()=>{
+
+// }
 
 
 //Reusable===============================================
@@ -213,7 +225,7 @@ const projectsSide=()=>{
     tl.add(setMenu('Resume','About','#e90db9','#7206b5'))
       .add(changeHeaderText('Projects_Section'))
       .add(screenRaise())
-      .to('.projectInfo',{display: 'inline-block', opacity: 1})
+      .to('.projectInfo',.5,{display: 'inline-block', opacity: 1})
 
     
 
@@ -323,7 +335,7 @@ const resButtonClick=(e)=>{
                 '<h4>Palm Beach State College</h4>   \
                 <p>Studying computer science and working towards a BA in IT Forensics. Studied various languages to earn an AS in computer Programming.</p>     \
                 \
-                <h4>Ironhack Bootcamp</h4>   \
+                <h4>Ironhack Miami</h4>   \
                 <p>Completed a 9-week intensive course in Javascript development, focusing on React and the MERN stack. I created multiple applications and participated in knowledge expanding sessions to gain insight on development in real world applications.</p>            \
                 '
             break;
