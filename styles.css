@@ -206,6 +206,21 @@ a{
     
 } /* End of small screen media query  */
 
+
+
+/* EXTRA SMALL MOBILE===================================== */
+@media only screen and (max-width: 321px){
+    .terminal{
+        font-size: 7px;
+    }
+
+    .hiddenMenu h1{
+        font-size: 24px;
+    }
+}/*End extra small mobile*/
+
+
+
 #karBlock h4{
     margin: 27px auto;
     font-size: 45px;
