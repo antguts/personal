@@ -1,7 +1,8 @@
-// Other variables===========================
-window.onload = ()=>{
-    alert('Site is a little messy right now, mobile in development.... Thanks for the patience')
-}
+
+// LOADING MESSAGE FOR ISSUES W/SITE
+// window.onload = ()=>{
+//     alert('Site is a little messy right now, mobile in development.... Thanks for the patience')
+// }
 
 
 // VARIABLE TO CREATE GSAP TIMELINE=======================
@@ -59,7 +60,7 @@ const hiddenMenuAnimation =()=>{
 
 const setMenu=(name1,name2,color,bgColor,heading)=>{
     
-    tl.to('.contentDisplay, #mobileMenu',{boxShadow: `0 8px 32px 0 ${color}`})
+    tl.to('.contentDisplay, #mobileMenu',{boxShadow: `-10px 8px 4px -2px ${color}`})
     .to('.cogFill',.2,{ fill: color},'-=.3')
     .to('.dropScreen',{backgroundColor: bgColor })
     .to('svg',.5,{fill: color},'-=1')
@@ -95,9 +96,9 @@ const aboutClick=(e)=>{
         .to('.leftAboutBorder', .3,{height: '100%', width: '100%'},'-=.2')
         .to('.rightAboutBorder', .6,{height: '100%', width: '100%'},'-=.3')
         .to('.leftAboutBorder, .rightAboutBorder', .4,{backgroundColor: '#7e7c7c'},'-=.7')
-        .to('.leftAboutBorder, .rightAboutBorder', .4,{height: '.6'},'-=.2')
-        .to('.leftAboutBorder', .4,{width: '290%'})
-        .to('.rightAboutBorder', .4,{marginRight: '-190%', width: '290%'},'-=.4')
+        .to('.leftAboutBorder, .rightAboutBorder', .4,{height: '0'},'-=.2')
+        // .to('.leftAboutBorder', .4,{width: '290%'})
+        .to('.rightAboutBorder', .4,{marginRight: '-190%', width: '290%'},'-=.1')
         
         .add(screenRaise())
 
