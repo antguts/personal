@@ -1,7 +1,7 @@
 /* ZOMBIE FONT================== */
 @font-face {
     font-family: corpse;
-    src: url("/personal/assets/exquisiteCorpse.ttf") format("opentype");
+    src: url("/../assets/exquisiteCorpse.ttf") format("opentype");
 }
 
 body{
