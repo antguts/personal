@@ -115,7 +115,7 @@ a{
     .aboutInfo{
         
         position: absolute;
-        top: 10vh;
+        top: 6vh;
         left: 15%;
         width: 70vw;
         margin: 0 auto;
@@ -194,7 +194,7 @@ a{
         top: 74vh;
         display: flex;
         margin: auto;
-        right: 9vw;
+        right: 11px;
     }
     .hiddenMenu h1{
         position: relative;
@@ -217,7 +217,6 @@ a{
 
     .hiddenMenu{
         margin: 15px 10px 0 0;
-        right: 11px;
     }
 
     .hiddenMenu h1{
@@ -237,19 +236,13 @@ a{
         position: revert;
         margin-top: 15px;
     }
-
-
-
 }/*End extra small mobile*/
-
-
 
 #karBlock h4{
     margin: 27px auto;
     font-size: 45px;
     font-family: corpse;
 }
-
 
 /* DESKTOP CSS ====================================== */
 @media only screen and (min-width: 900px) {
@@ -418,8 +411,6 @@ a{
         transform: scale(1.4);    
     }
 
-
-
     /* Hidden Menus that appear after first click=================================== */
     .hiddenMenu{
         position: absolute;
@@ -439,12 +430,10 @@ a{
         margin-bottom: 0;
         width: 50%;
     }
-
     
     .hiddenName1{
         z-index: 4;
     }
-    
     
     span:hover{
         /* pointer-events: none; */
@@ -457,7 +446,6 @@ a{
         top: 15vh;
         margin-bottom: 20px;
     }
-
 
     .strings{
         position: absolute;
@@ -484,7 +472,6 @@ a{
         width: 100%;
     }
 
-
     /* ABOUT CONTENT============================= */
     .aboutContent h1{
         font-size: 45px;  
@@ -508,7 +495,6 @@ a{
         margin-top: 4vh;
     }
 
-
     /* PROJECT CONTENT======================================= */
     .projectInfo{
         margin-left: 15%;
@@ -521,16 +507,19 @@ a{
         overflow: scroll;
         overflow-x: hidden;
     }
+
     .projectInfo img{
         width: 100%;
         height: auto;
         padding: 5px;
         border-radius: 5px;
     }
+
     .projectInfo h4{
         font-size: 21px;
         margin-left: 20px;
     }
+
     .projectInfo p{
         color: rgb(27, 202, 27);
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -546,7 +535,6 @@ a{
     .projLink:hover{
         border-bottom: 2px solid #00d8fb; 
     }
-
    
     #karBlock, #devBlock {
         display: flex;
@@ -561,6 +549,7 @@ a{
         width: 12vw;
         margin-top: 35px;
     }
+    
     .cogs{
         position: fixed;
         opacity: 1;
@@ -574,23 +563,28 @@ a{
         border: none;
         opacity: 1;
     }
+    
     #cog1, #cog2, #cog3, #cog4, #cog5{
         position: absolute;
     }
+    
     #cog1{
         left: 0;
        margin-top: 5px; 
        width: 30%;
     }
+    
     #cog2{
         width: 43%;
         top: 32%;
         left: -21%;
     }
+    
     #cog3{
         top: 19%;
         left: 23%;
     }
+    
     #cog4{
         top: 22%;
         width: 50%;
@@ -718,14 +712,6 @@ a{
         width: 100%;
         bottom: 0;
     }
-
-
-    /* ANIMATIONS=========================================================== */
-
-
-
-
-    
 } /*End media query for desktop*/
 
 

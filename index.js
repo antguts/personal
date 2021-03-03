@@ -1,21 +1,18 @@
 
 // LOADING MESSAGE FOR ISSUES W/SITE
 // window.onload = ()=>{
-//     alert('Site is a little messy right now, mobile in development.... Thanks for the patience')
+//     alert('')
 // }
 
 
 // VARIABLE TO CREATE GSAP TIMELINE=======================
 const tl=new TimelineMax
 
-
-
 //MOBILE ANIMATIONS================================
 const splitChoice=()=>{
     tl.to('.splitLeft',.3,{opacity: 0})
       .to('.splitRight',.3,{marginLeft: '90vw'},'-=.3')
-    //   .to('#mobCloseButton',.6,{opacity: 1, display: 'block', delay: 2})
-}
+} // END splitChoice
 
 const mobSelect=(e)=>{
     let temp = e.id
@@ -23,44 +20,29 @@ const mobSelect=(e)=>{
     tl.to('#mobileMenu',{marginTop: '5vh'})
       .add(splitChoice())
       .to('#mobileMenu',.5,{height: '75vh'},'-=1')
-    .add(()=>{
-        switch(temp){
-            case 'aboutMob':
-                aboutSide()
-            break;
-            case 'projectMob':
-                projectsSide()
-            break;
-            case 'bioMob':
-                resumeSide()
-            break;
-        }
-    },'-=2')
-      
-
-
-    
-}
-
-// const mobProj=()=>{
-
-// }
-// const mobBio=()=>{
-
-// }
-
+      .add(()=>{
+          switch(temp){
+              case 'aboutMob':
+                  aboutSide()
+              break;
+              case 'projectMob':
+                  projectsSide()
+              break;
+              case 'bioMob':
+                  resumeSide()
+              break;
+          }
+      },'-=2')    
+} // END mobSelect
 
 //Reusable===============================================
 
 const hiddenMenuAnimation =()=>{
-    // tl.to('.hiddenMenu',.5,{opacity: 0})
       tl.to('.hiddenName1, .hiddenName2',1,{top:'5vh', ease:Power4.easeOut})
-    //   .to('.hiddenMenu',.5,{opacity: 1}) 
 }
 
-const setMenu=(name1,name2,color,bgColor,heading)=>{
-    
-    tl.to('.contentDisplay, #mobileMenu',{boxShadow: `-10px 8px 4px -2px ${color}`})
+const setMenu=(name1,name2,color,bgColor,heading)=>{  
+    tl.to('.contentDisplay, #mobileMenu',{boxShadow: `-3px -8px 30px 8px ${color}`})
     .to('.cogFill',.2,{ fill: color},'-=.3')
     .to('.dropScreen',{backgroundColor: bgColor })
     .to('svg',.5,{fill: color},'-=1')
@@ -73,22 +55,12 @@ const setMenu=(name1,name2,color,bgColor,heading)=>{
         document.querySelector('.string1').style.backgroundColor = color
 
     })
-    
-
-}
-
-
-// Click Events========================================================
-
-
+}//END setMenu
 
 // Main Menu============================================================
 const aboutClick=(e)=>{
-    // abClicked=true
-
     // Sets hidden menu names==========================================
     setMenu('Resume','Projects','orange','grey')
-
 
     // Content section animation=======================================
     tl
@@ -97,54 +69,33 @@ const aboutClick=(e)=>{
         .to('.rightAboutBorder', .6,{height: '100%', width: '100%'},'-=.3')
         .to('.leftAboutBorder, .rightAboutBorder', .4,{backgroundColor: '#7e7c7c'},'-=.7')
         .to('.leftAboutBorder, .rightAboutBorder', .4,{height: '0'},'-=.2')
-        // .to('.leftAboutBorder', .4,{width: '290%'})
         .to('.rightAboutBorder', .4,{marginRight: '-190%', width: '290%'},'-=.1')
-        
         .add(screenRaise())
-
         .to('.leftAboutBorder', .4, {height: '0', width: '5%'})
         .to('.rightAboutBorder', .4,{height: '0', width: '5%', marginRight: 0},'-=.3')
-        
-    // Move hidden menu to final position============================================
     
     // Change text on header changes with GSAP animation================================
     changeHeaderText("About_Section")
     document.querySelector('.aboutInfo').style.display='inline-block'
     tl.to('.aboutInfo',.5,{opacity: 1, marginTop: '8vh'},'-=.3')
     hiddenMenuAnimation()
-}
-
-
-
-
+}// END aboutClick
 
 const projClick=()=>{
-    // projClicked = true
     tl.to('div .leftProjBorder,div .rightProjBorder',{height: '25%'})
       .to(' h2',.2,{ opacity: 0},'-=.2')
       .to(' h2',{ display: 'none'})
       .to('div .leftProjBorder,div .rightProjBorder',.5,{left: 0},'-=.6')
       .to('div .leftProjBorder,div .rightProjBorder',.5,{width: '100%'},'-=.3')
-      .to('div .leftProjBorder,div .rightProjBorder',.3,{height: '100%'})
-    //   screenRaise()
-
-
-    //   .to('.dropScreen', .4,{height: '100%'})
-    
+      .to('div .leftProjBorder,div .rightProjBorder',.3,{height: '100%'})  
 
     projectsSide()
-
     // Move hidden menu to final position============================================
     hiddenMenuAnimation()
+    
+}// END projClick
 
-    // Change text on header changes with GSAP animation================================
-
-
-
-}
 const resClick=()=>{
-    // resClicked = true
-    // alert("resume");
     tl.to('div .leftResBorder,div .rightResBorder',{width: '25%'})
       .to(' h2',.5,{ opacity: 0},'-=2')
       .to(' h2',{ display: 'none'})
@@ -152,15 +103,7 @@ const resClick=()=>{
       .to('div .leftResBorder,div .rightResBorder',.6,{top: '0', height: '100vh'})
       .add(resumeSide())
       hiddenMenuAnimation()
-}
-
-
-
-
-
-
-//Second menu that appears in content display===============================
-
+}// END resClick
 
 // Checks second menu and directs the event=============================
 const checkMenu=(e)=>{
@@ -178,7 +121,6 @@ const checkMenu=(e)=>{
 }
 
 const removeContent=(e)=>{
-    // console.log("This is eeee:"+e)
     switch(e.innerHTML){
         case 'Resume':
             tl.to('.aboutInfo, .projectInfo',.5,{margin: '3vh auto',display: 'none',opacity: 0})
@@ -192,9 +134,9 @@ const removeContent=(e)=>{
             tl.to('.aboutInfo, .resumeInfo',.5,{margin: '3vh auto',display: 'none',opacity: 0})
             break;
     }
-}
+}// END removeContent
+
 const secondMenuSelect=(e)=>{
-    // console.log("This is eeee:"+e)
     tl
         .to('.string1',.3,{height: '55vh'})
         .to('.hiddenName1, .hiddenName2',.2,{top: '15vh'},'-=.2')
@@ -202,93 +144,70 @@ const secondMenuSelect=(e)=>{
         .add(removeContent(e))
         .to('.dropScreen',.5,{height: 0})
         .add(checkMenu(e.innerHTML),'+=5')       
-}
+}// END secondMenuSelect
 
 // Side menu events============================================================
-
-    
 const screenRaise=()=>{
     tl.to('.dropScreen',.3,{height: '100%'})
       .to('.hiddenName1, .hiddenName2',.2,{top: '5vh'})
       .to('.cogs, .cogFill',.4,{left: 0, delay: 1})
 
-}
-const aboutSide=()=>{
-    
+}// END screenRaise
+
+const aboutSide=()=>{    
     tl.add(setMenu('Resume','Projects','orange','grey'))
       .add(changeHeaderText('About_Section'))
       .add(screenRaise())
       .to('.aboutInfo',.5,{display:'inline-block',opacity: 1, marginTop: '7vh'})
+}// END aboutSide
 
-}
 const projectsSide=()=>{
-    
     tl.add(setMenu('Resume','About','#e90db9','#7206b5'))
       .add(changeHeaderText('Projects_Section'))
       .add(screenRaise())
-      .to('.projectInfo',.5,{display: 'inline-block', opacity: 1})
+      .to('.projectInfo',.5,{display: 'inline-block', opacity: 1}) 
+}// END projectsSide
 
-    
-
-}
 const resumeSide=()=>{
-    
     tl.add(setMenu('About','Projects','#2f7dd0','rgb(198 216 220)'))
       .add(changeHeaderText('Resume_Section'))
       .add(screenRaise())
       .to('.resumeInfo',.5,{display: 'block',opacity: 1, marginTop: '2vh'})
-}
+}// END resumeSide
 
 //border GSAP Animations on home==================================================
 
 //About section==========================================================
 const aboutBorderHover =()=>{
-    
-        // tl.to('.leftAboutBorder, .rightAboutBorder',{height: '1%'})
         tl.to('.leftAboutBorder', .3,{height: '25%', width: '25%'},'-=.1')
         tl.to('.rightAboutBorder', .3,{height: '25%', width: '25%'}, '-=.3')
-    
 } 
 
 const aboutBorderHoverOut =()=>{
-    
         tl.to('.rightAboutBorder, .leftAboutBorder', .5,{height: '0%', width: '5%'})
-    
 } 
 
 //Resume section==========================================================
 const resumeBorderHover =()=>{
-    
-        // tl.to('.leftAboutBorder, .rightAboutBorder',{height: '1%'})
         tl.to('.leftResBorder', .3,{width: '25%'},'-=.1')
         tl.to('.rightResBorder', .3,{width: '25%'}, '-=.3')
-    
 } 
 
-const resumeBorderHoverOut =()=>{
-    
+const resumeBorderHoverOut =()=>{    
         tl.to('.rightResBorder, .leftResBorder', .5,{ width: '0%'})
-    
 } 
 
 //Projects section==========================================================
 const projectsBorderHover =()=>{
-    
-        // tl.to('.leftAboutBorder, .rightAboutBorder',{height: '1%'})
         tl.to('.leftProjBorder', .3,{height: '25%'},'-=.1')
         tl.to('.rightProjBorder', .3,{height: '25%'}, '-=.3')
-    
 } 
 
 const projectsBorderHoverOut =()=>{
-    
-        tl.to('.rightProjBorder, .leftProjBorder', .5,{height: '0'})
-    
+        tl.to('.rightProjBorder, .leftProjBorder', .5,{height: '0'})  
 } 
 
-
 // jquery==============================================================
-
 $(".aboutSection").hover(aboutBorderHover,aboutBorderHoverOut)
 $(".projectSection").hover(projectsBorderHover,projectsBorderHoverOut)
 $(".resumeSection").hover(resumeBorderHover,resumeBorderHoverOut)
@@ -297,7 +216,7 @@ $('.projectInfo a').hover(
     ()=>{tl.to('#scrollWindow',.5,{width: '100%'})}
     ,
     ()=>{tl.to('#scrollWindow',.5,{width: '0'})}
-    )
+)
 
 
     
@@ -307,29 +226,8 @@ $(".hiddenName1, .hiddenName2").hover(
     ()=>{tl.to('.string1',.2,{height: '0'})}
 )
 
-// $('#karBlock').hover(
-//     ()=>{
-//         tl.to('#karBlock p',{display: 'block', opacity: 1})
-//           .to('#karBlock img', {width: '100%'},'-=.5')
-//         }
-//     ,
-//     ()=>{
-//         tl.to('#karBlock p',.5,{ opacity: 0})
-//           .to('#karBlock p',{display: 'none', opacity: 0})
-//           .to('#karBlock img', {width: '25%'},'-=.5')
-//     }
-// )
-// $('#devBlock').hover(
-//     ()=>{tl.to('#devBlock p',{display: 'block', opacity: 1})}
-//     ,
-//     ()=>{tl.to('#devBlock p',{display: 'none', opacity: 0})}
-// )
-
-
-
 //RESUME H1 content fill===============================================
-const resButtonClick=(e)=>{
-    
+const resButtonClick=(e)=>{    
     switch(e.innerHTML){
         case 'EDUCATION':
             document.querySelector('#resContent').innerHTML= 
@@ -355,17 +253,12 @@ const resButtonClick=(e)=>{
                 <p></p>\
                 '
             break;
-
-    }
+    }//END switch
 
     tl.to('h4 p',{marginTop: '35px', opacity: 0})
     .to('h4',{marginTop: '15px', opacity: 1, stagger: .3},'-=.4')
     .to('p',{marginTop: '15px', opacity: 1, stagger: .2},'-=.7')
-
-
-}
-
-
+}// END resButtonClick
 
 //functions to delay type text in the header==============================
 let changeHeaderText=(e)=>{
@@ -374,10 +267,10 @@ let changeHeaderText=(e)=>{
     for(let i=0;i<e.length;i++){
         delayLetters(i,e);
     }
-}
-let delayLetters=(i,name)=> { 
-setTimeout(function() { 
-    document.querySelector('#location').innerHTML+=name[i]
-}, 50 * i); 
-} 
+}// END changeHeaderText
 
+let delayLetters=(i,name)=> { 
+  setTimeout(function() { 
+      document.querySelector('#location').innerHTML+=name[i]
+  }, 50 * i); 
+}// END delayLetters
