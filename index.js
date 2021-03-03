@@ -218,7 +218,7 @@ const aboutSide=()=>{
     tl.add(setMenu('Resume','Projects','orange','grey'))
       .add(changeHeaderText('About_Section'))
       .add(screenRaise())
-      .to('.aboutInfo',.5,{display:'block',opacity: 1, marginTop: '8vh'})
+      .to('.aboutInfo',.5,{display:'inline-block',opacity: 1, marginTop: '7vh'})
 
 }
 const projectsSide=()=>{
