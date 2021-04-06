@@ -25,6 +25,9 @@ a{
     .desktop {
         display: none;
     }
+    body{
+        overflow: scroll;
+    }
     #mobileMenu{
         text-align: center;
         margin: auto;

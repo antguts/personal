@@ -248,10 +248,10 @@ const resButtonClick=(e)=>{
                 '
             break;
         case 'ABOUT ME':
-            document.querySelector('#resContent').innerHTML= 
-                '<h4>Aspirations</h4>\
-                <p></p>\
-                '
+            // document.querySelector('#resContent').innerHTML= 
+            //     '<h4>Aspirations</h4>\
+            //     <p></p>\
+            //     '
             break;
     }//END switch
 
