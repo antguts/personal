@@ -33,14 +33,14 @@ a{
         margin: auto;
         margin-top: 5vh;
         width: 90%;
-        height: 79vh;
+        height: 62vh;
         overflow: scroll;
         overflow-x: hidden;
         z-index: 33;
     }
     #mobileMenu h3{
         color: rgb(23, 228, 47);
-        font-size: 62px;    
+        font-size: 45px;    
     }
     .splitLeft, .splitRight{
         /* position: absolute; */
