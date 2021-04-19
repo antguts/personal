@@ -42,7 +42,7 @@ const hiddenMenuAnimation =()=>{
 }
 
 const setMenu=(name1,name2,color,bgColor,heading)=>{  
-    tl.to('.contentDisplay, #mobileMenu',{boxShadow: `-3px -8px 30px 8px ${color}`})
+    tl.to('.contentDisplay, #mobileMenu',{boxShadow: `-3px -8px 30px -3px ${color}`})
     .to('.cogFill',.2,{ fill: color},'-=.3')
     .to('.dropScreen',{backgroundColor: bgColor })
     .to('svg',.5,{fill: color},'-=1')
