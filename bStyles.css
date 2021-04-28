@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+html {
+    /* COMPENSATE FOR STICKY NAV COVERING ROWS */
+      scroll-padding-top: 50px; 
+}
+
 body{
     font-family: 'Poppins', sans-serif;  
 }
@@ -11,19 +16,25 @@ body{
 
 /* NAVBAR */
 .navbar{
+    
     padding: 25px;
 }
+
 .navbar ul{
     position: absolute;
     right: 0;
 }
+
 .navbar a{
     color: white;
 }
 
-
 .container{
     width: 90%;
+}
+
+.row{
+    height: 75vh;
 }
 
 .jumbotron{
@@ -35,13 +46,14 @@ body{
 }
 
 .aboutOwner{
-    /* width: 100%; */
+    
 }
 
 .aboutOwner h1, .aboutOwner p{
     background-color: lightcoral;
     color: #646161;
 }
+
 .aboutOwner img{
     width: 100%;
 }
@@ -55,6 +67,7 @@ body{
     background-color: lightslategray;
     text-align: center;
     color: white;
+    padding-top: 20px;
 }
 
 .services img{
@@ -63,22 +76,22 @@ body{
 }
 
 .appointmentText p{
-    padding-right: 30px;
+    font-size: 25px;
+    padding: 20px 30px 0 0;
+}
+
+.portfolio{
+    /* background-color: lightsteelblue; */
+    height: auto;
+    overflow: hidden;
 }
 
 
-
-
-
-
-.portfolio{
+.appointment{
+    padding-top: 30px;
     background-color: lightsteelblue;
 }
 
 .form-group{
     margin-bottom: 10px;
-}
-
-body{
-    bottom: 0;
 }
