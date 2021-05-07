@@ -12,6 +12,12 @@ body{
 /* SHARED STYLES */
 .navbar, .footer{
     background-color: #646161;
+    z-index: 100;
+}
+
+.footer{
+    width: 100%;
+    position: absolute;
 }
 
 /* NAVBAR */
@@ -34,7 +40,7 @@ body{
 }
 
 .row{
-    height: 75vh;
+    height: 100vh;
 }
 
 .jumbotron{
@@ -75,22 +81,28 @@ body{
     margin-bottom: 20px;
 }
 
+.services .col{
+    /* opacity: 1; */
+}
+
+.appointment{
+    /* height: 75vh; */
+    padding-top: 30px;
+    background-color: lightsteelblue;
+}
+
 .appointmentText p{
     font-size: 25px;
     padding: 20px 30px 0 0;
 }
 
 .portfolio{
-    /* background-color: lightsteelblue; */
-    height: auto;
+    background-color: white;
+    /* height: 75vh; */
     overflow: hidden;
 }
 
 
-.appointment{
-    padding-top: 30px;
-    background-color: lightsteelblue;
-}
 
 .form-group{
     margin-bottom: 10px;
