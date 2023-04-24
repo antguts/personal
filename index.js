@@ -274,3 +274,10 @@ let delayLetters=(i,name)=> {
       document.querySelector('#location').innerHTML+=name[i]
   }, 50 * i); 
 }// END delayLetters
+
+
+
+
+
+
+

@@ -177,11 +177,31 @@
         
 
 
+         <!-- SECRET HEART -->
+         <button id="secretHeart" onclick=popup()>&#9829;</button>
+
     </div><!--End Container-->    
 </body>
     
     <script src='/../personal/index.js' defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+
+
+    <!-- SECRET HEART -->
+    <script>
+        const popup=()=>{
+            let answer = prompt(`What does yelling 'Nightmare! Nightmare! Nightmare!' cure?`)
+            console.log(answer)
+            if(answer.toLowerCase() == "retardation"){
+                // var audio = new Audio('audio_file.mp3');
+                // audio.play();
+                window.location.href = '/../personal/bbDay.html';
+            }
+            
+        
+        
+        }
+    </script>
 
 </html>
