@@ -10,20 +10,18 @@
 
 <style>
     
-    h1 {
-        font-size: 5em;
-        margin-left: 28vw;
-    }
     img {
-        /* border-radius: 15px; */
         border: 5px solid rgb(61, 44, 161);
         width: 33vw;  
         height: 40vh;  
-        /* position: absolute;   */
-        /* bottom: 0; */
-        /* margin-left: 33vw;  */
     }
-    
+
+    #title {
+        color:rgb(240, 18, 192);
+        font-size: 5em;
+        margin-left: 28vw;
+    }
+
     #pics {
         display: flex;
         position: absolute;
@@ -31,9 +29,19 @@
     }
 
     #countDown {
+        position: absolute;
         font-size: 10em;
-        margin-left: 30vw;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(255, 243, 68);
+        right: 0;
+        margin: 15vh 5vw;
         /* padding-left: 0; */
+    }
+    #handB {
+        width: 24vw;
+        height: 24vh;
+        margin: 10vh 0 0 5vw;
+        border: none;
     }
 
     /*use to create a big gay border. edit colors*/
@@ -52,13 +60,10 @@
 
 <body>
 
-    <h1>Countdown to BB time!</h1>
-   
-    <h1 id="countDown"> 
-        <span>HH</span>
-        <span>DD</span>
-        <span>SS</span>
-    </h1>
+    <h1 id="title">Countdown to BB time!</h1>
+    <h1 id="countDown"></h1>
+    <img id="handB" src="/../personal/assets/handbanana.png">
+
 
 <!-- /../personal/    Put this in front of img sources before pushing-->    
     <div id="pics"> 
@@ -72,7 +77,30 @@
 
 <script>
 
+// COUNTDOWN w3 ez
+    var bbDate = new Date("Apr 26, 2023 17:32:00").getTime();
 
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    var currDate = new Date().getTime();
+    var timeLeft = bbDate - currDate;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    // Display the result in the element with id="demo"
+    document.getElementById("countDown").innerHTML = days + " : " + hours + " : "
+    + minutes + " : " + seconds;
+
+    // Countdown finish
+    if (timeLeft < 0) {
+        clearInterval(x);
+        document.getElementById("countDown").innerHTML = "We iz happy!";
+    }
+    }, 1000);
 
 </script>
 
