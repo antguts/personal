@@ -721,16 +721,7 @@ a{
 
 /* SHARED ======================================== */
 
-#secretHeart {
-    position: absolute;
-    padding: 15px;
-    background-color: #444444;
-    border: none;
-    background: none;
-    width: 5px;
-    right: 10px;
-    bottom: 0;
-}
+
 
 /* Blinking cursor in terminal=========================================== */
 #cursor {
