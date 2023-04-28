@@ -11,9 +11,11 @@
 <style>
     
     img {
+        margin-left: 30vw;
         border: 5px solid rgb(61, 44, 161);
-        width: 33vw;  
-        height: 40vh;  
+        width: 20vw;  
+        z-index: -1;
+        /* height: 40vh;   */
     }
 
     #title {
@@ -30,11 +32,13 @@
 
     #countDown {
         position: absolute;
-        font-size: 8vw;
+        font-size: 7.5vw;
         font-family:Verdana, Geneva, Tahoma, sans-serif;
         color: rgb(255, 243, 68);
+        background-color: rgb(177, 128, 255);
         right: 0;
-        margin: 15vh 5vw;
+        bottom: 0;
+        /* margin: 15vh 5vw; */
         /* padding-left: 0; */
     }
     #handB {
@@ -67,11 +71,9 @@
     <img id="handB" src="/../personal/assets/handbanana.png">
 
 
-<!-- /../personal/    Put this in front of img sources before pushing-->    
+<!-- ./    Put this in front of img sources before pushing-->    
     <div id="pics"> 
-        <img src="/../personal/assets/anj2.png"> 
-        <img src="/../personal/assets/anj.jpg"> 
-        <img src="/../personal/assets/anj3.jpg">
+        <img src="/../personal/assets/anj4.jpg"> 
     </div> 
 
 
@@ -100,7 +102,7 @@
     // Countdown finish
     if (timeLeft < 0) {
         clearInterval(x);
-        document.getElementById("countDown").innerHTML = "We iz happy!";
+        document.getElementById("countDown").innerHTML = "We iz durp!";
     }
     }, 1000);
 
